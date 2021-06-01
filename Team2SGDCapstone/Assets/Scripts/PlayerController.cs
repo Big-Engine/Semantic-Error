@@ -5,65 +5,68 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody rb;
-    [SerializeField] private float speed;
-    [SerializeField] private float jumpForce;
-    private bool isGrounded;
-
-    [SerializeField] private LayerMask groundLayer;
+    private BoxCollider boxCollider;
+    [SerializeField] private float speed = 10;
+    [SerializeField] private float jumpForce = 20;
+    private float distToGround;
+    private int jumpsRemain = 1;//for double/wall jumping
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        //speed = 5f;
-        //jumpForce = 10f;
-        isGrounded = true;
-        Debug.Log("isGrounded = true");
+        boxCollider = GetComponent<BoxCollider>();
+        //isGrounded = true;
+        distToGround = boxCollider.bounds.extents.y;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Move left/right
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
+            transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
         }
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             transform.position += Vector3.left * speed * Time.deltaTime;
+            transform.rotation = new Quaternion(0f, -180f, 0f, 0f);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        //jump
+        if (Input.GetKeyDown(KeyCode.Space) && (isGrounded() || jumpsRemain > 0))
         {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isGrounded = false;
-            Debug.Log("isGrounded = false");
+            rb.velocity = new Vector3 (0, jumpForce, 0);
+            jumpsRemain--;
+            //Debug.Log(jumpsRemain);
+        }
+
+        if(isGrounded())
+        {
+            jumpsRemain = 1;
+            //Debug.Log(jumpsRemain);
         }
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void FixedUpdate()//gravity
     {
-        isGrounded = true;
-        Debug.Log("isGrounded = true");
+        rb.AddForce(Physics.gravity * 2f, ForceMode.Acceleration);
     }
 
-    private void OnCollisionExit(Collision collision)
+    private bool isGrounded()//check if player is on the ground
     {
-        isGrounded = false;
-        Debug.Log("isGrounded = false");
+        return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.5f);
     }
 
-    //private bool isGrounded()
-    //{
-    //    RaycastHit hitInfo = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), 1f, Mathf.Infinity, groundLayer);
+    private void OnTriggerEnter(Collider other)//walljump
+    {
+        if(other.tag == "wall")
+        {
+            jumpsRemain++;
+            //Debug.Log(jumpsRemain);
+        }
+    }
 
-    //    bool isGrounded = false;
-
-    //    if (hitInfo.collider != null)
-    //    {
-    //        isGrounded = true;
-    //    }
-
-    //    return isGrounded;
-    //}
 }
