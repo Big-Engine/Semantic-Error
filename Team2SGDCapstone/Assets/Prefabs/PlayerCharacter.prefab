@@ -3990,7 +3990,7 @@ CharacterController:
   serializedVersion: 2
   m_Height: 1.75
   m_Radius: 0.25
-  m_SlopeLimit: 90
+  m_SlopeLimit: 100
   m_StepOffset: 0.25
   m_SkinWidth: 0.03
   m_MinMoveDistance: 0
@@ -4027,11 +4027,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 0}
-  gravity: -19.81
+  gravity: -60
+  fallForce: -300
   playerSpeed: 8
-  jumpForce: 3
+  jumpForce: 4
   groundCheck: {fileID: 6391007686620689662}
-  groundDistance: 0.4
+  groundDistance: 0.25
   groundMask:
     serializedVersion: 2
     m_Bits: 8
