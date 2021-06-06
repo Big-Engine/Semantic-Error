@@ -102,14 +102,25 @@ public class PlayerCharacterController : MonoBehaviour
     //Handles the animations. Leave this alone or risk breaking everything!
     {
         bool isWalkingRight = animator.GetBool("isWalkingRight");
+        bool isWalkingLeft = animator.GetBool("isWalkingLeft");
 
         if(inputDirection > 0.1 && !isWalkingRight)
         {
             animator.SetBool("isWalkingRight", true);
+            animator.SetBool("isWalkingLeft", false);
+            //Debug.Log("Right");
         }
-        else if (inputDirection == 0 && isWalkingRight)
+        else if(inputDirection < -0.1 && !isWalkingLeft)
+        {
+            animator.SetBool("isWalkingLeft", true);
+            animator.SetBool("isWalkingRight", false);
+            //Debug.Log("Left");
+        }
+        else if (inputDirection == 0 && (isWalkingRight || isWalkingLeft))
         {
             animator.SetBool("isWalkingRight", false);
+            animator.SetBool("isWalkingLeft", false);
+            //Debug.Log("Neither");
         }
     }
 
