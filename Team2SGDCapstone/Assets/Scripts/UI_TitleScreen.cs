@@ -16,7 +16,7 @@ public class UI_TitleScreen : MonoBehaviour
     }
     IEnumerator LoadIntro()
     {
-        SceneManager.LoadScene("Main_01_Intro Cutscene");
+        SceneManager.LoadScene("Main_01_IntroCutscene");
         yield return new WaitForSeconds(delay);
     }
 
@@ -27,7 +27,7 @@ public class UI_TitleScreen : MonoBehaviour
     }
     IEnumerator LoadLevelSelect()
     {
-        SceneManager.LoadScene("Main_02_Level Select Screen");
+        SceneManager.LoadScene("Main_02_LevelSelectScreen");
         yield return new WaitForSeconds(delay);
     }
 
