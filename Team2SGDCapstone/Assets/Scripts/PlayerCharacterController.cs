@@ -119,13 +119,13 @@ public class PlayerCharacterController : MonoBehaviour
             animator.SetBool("isPlayerGrounded", false);
         }
 
-        if(inputDirection > 0.1 && !isWalkingRight && isPlayerGrounded)
+        if(inputDirection > 0.1 && !isWalkingRight)
         {
             animator.SetBool("isWalkingRight", true);
             animator.SetBool("isWalkingLeft", false);
             //Debug.Log("Right");
         }
-        else if(inputDirection < -0.1 && !isWalkingLeft && isPlayerGrounded)
+        else if(inputDirection < -0.1 && !isWalkingLeft)
         {
             animator.SetBool("isWalkingLeft", true);
             animator.SetBool("isWalkingRight", false);
