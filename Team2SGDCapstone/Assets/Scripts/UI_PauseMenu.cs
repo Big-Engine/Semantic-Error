@@ -7,7 +7,9 @@ public class UI_PauseMenu : MonoBehaviour
 {
     public GameObject pausePanel;
     public GameObject optionsPanel;
+    public GameObject quitPanel;
     [SerializeField] private string currentScene;
+    [SerializeField] private string titleScene;
 
     void Update()
     {
@@ -16,6 +18,11 @@ public class UI_PauseMenu : MonoBehaviour
             if(optionsPanel.activeInHierarchy == true)
             {
                 optionsPanel.SetActive(false);
+                pausePanel.SetActive(true);
+            }
+            else if(quitPanel.activeInHierarchy == true)
+            {
+                quitPanel.SetActive(false);
                 pausePanel.SetActive(true);
             }
             else
@@ -56,9 +63,26 @@ public class UI_PauseMenu : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void OnClickQuit()
+    public void OnClickMenu()
+    {
+        SceneManager.LoadScene(titleScene);
+        Time.timeScale = 1;
+    }
+
+    //Quit
+    public void OnClickQuitPanel()
+    {
+        pausePanel.SetActive(false);
+        quitPanel.SetActive(true);
+    }
+    public void OnClickQuitYes()
     {
         Application.Quit();
         Debug.Log("Closing game...");
+    }
+    public void OnClickQuitNo()
+    {
+        pausePanel.SetActive(true);
+        quitPanel.SetActive(false);
     }
 }
