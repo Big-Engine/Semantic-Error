@@ -2604,11 +2604,20 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
   - component: {fileID: 1266785592}
   - component: {fileID: 1266785594}
   - component: {fileID: 1266785593}
   m_Layer: 5
   m_Name: Text_Options
+=======
+  - component: {fileID: 1730765976}
+  - component: {fileID: 1730765975}
+  - component: {fileID: 1730765974}
+  - component: {fileID: 1730765973}
+  m_Layer: 3
+  m_Name: Plane
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
