@@ -3,7 +3,12 @@ guid: 2aebc3e308f1b4f4baef25f46363fad6
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stalactite_Ground_Two
+    second: {fileID: 2100000, guid: 4c15f8c4bfbd2404498856c15d3b61b9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

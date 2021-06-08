@@ -3,7 +3,12 @@ guid: 80bf48db458fa7441895f0f9eca590ed
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stalactite_Five
+    second: {fileID: 2100000, guid: 9d18a57aeaca20340b61fa006e7c6be0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

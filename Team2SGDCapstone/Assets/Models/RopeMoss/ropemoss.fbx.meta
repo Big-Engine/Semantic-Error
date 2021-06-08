@@ -3,7 +3,12 @@ guid: 113f6736a65b0e041a9a6e8a26d3cb60
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ropeMoss
+    second: {fileID: 2100000, guid: 772601dc068b5f744b232c76051fd60a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
