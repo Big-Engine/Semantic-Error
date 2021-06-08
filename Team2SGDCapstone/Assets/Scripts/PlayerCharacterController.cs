@@ -25,7 +25,7 @@ public class PlayerCharacterController : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-    private bool isGrounded;
+    [SerializeField] private bool isGrounded;
 
     //Player Animations
     Animator animator;
@@ -101,8 +101,23 @@ public class PlayerCharacterController : MonoBehaviour
     private void AnimationHandler()
     //Handles the animations. Leave this alone or risk breaking everything!
     {
+        //Declaration of variables within the Animator Controller.
         bool isWalkingRight = animator.GetBool("isWalkingRight");
         bool isWalkingLeft = animator.GetBool("isWalkingLeft");
+        bool isPlayerGrounded = animator.GetBool("isPlayerGrounded");
+
+        //Updates velocity float in the animator.
+        animator.SetFloat("playerVelocity", velocity.y);
+
+        animator.SetBool("isPlayerGrounded", true);
+        if(isGrounded)
+        {
+            animator.SetBool("isPlayerGrounded", true);
+        }
+        else
+        {
+            animator.SetBool("isPlayerGrounded", false);
+        }
 
         if(inputDirection > 0.1 && !isWalkingRight)
         {
