@@ -23,4 +23,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_03.unity
     guid: a8ad1711057496a409728c7d403d679b
+  - enabled: 1
+    path: Assets/Scenes/Dev_AssetGallery.unity
+    guid: fdbbde61adc57844f9f232caf15ce270
+  - enabled: 1
+    path: Assets/Scenes/Dev_CameraControls.unity
+    guid: c32fb191f9307e24593cf3b2ea0d3045
+  - enabled: 1
+    path: Assets/Scenes/Dev_Player.unity
+    guid: 0d00ec1dbcbb09e488a10b92f917961e
   m_configObjects: {}

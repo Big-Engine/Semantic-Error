@@ -2823,7 +2823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quitPanel: {fileID: 866270782}
   optionsPanel: {fileID: 290520826}
-  IntroScene: Main_01_IntroCutscene
+  IntroScene: Dev_CameraControls
   LevelSelectScene: Main_02_LevelSelectScreen
 --- !u!4 &1757976407
 Transform:

@@ -958,9 +958,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7af23318789f8428b13b79d7eb6a33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelOne: Level_01
-  LevelTwo: Level_02
-  LevelThree: Level_03
+  LevelOne: Dev_CameraControls
+  LevelTwo: Dev_AssetGallery
+  LevelThree: Dev_Player
   TitleScene: Main_00_TitleScreen
 --- !u!4 &441177794
 Transform:
