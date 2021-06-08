@@ -7,6 +7,11 @@ public class UI_LevelSelect : MonoBehaviour
 {
     private float delay = 2.0f;
 
+    [SerializeField] private string LevelOne;
+    [SerializeField] private string LevelTwo;
+    [SerializeField] private string LevelThree;
+    [SerializeField] private string TitleScene;
+
     //Level 1
     public void OnPressLevel1()
     {
@@ -14,7 +19,7 @@ public class UI_LevelSelect : MonoBehaviour
     }
     IEnumerator LoadLevel1()
     {
-        SceneManager.LoadScene("Level_01");
+        SceneManager.LoadScene(LevelOne);
         yield return new WaitForSeconds(delay);
     }
 
@@ -25,7 +30,7 @@ public class UI_LevelSelect : MonoBehaviour
     }
     IEnumerator LoadLevel2()
     {
-        SceneManager.LoadScene("Level_02");
+        SceneManager.LoadScene(LevelTwo);
         yield return new WaitForSeconds(delay);
     }
 
@@ -36,7 +41,18 @@ public class UI_LevelSelect : MonoBehaviour
     }
     IEnumerator LoadLevel3()
     {
-        SceneManager.LoadScene("Level_03");
+        SceneManager.LoadScene(LevelThree);
+        yield return new WaitForSeconds(delay);
+    }
+
+    //back button
+    public void OnPressBack()
+    {
+        StartCoroutine(LoadTitle());
+    }
+    IEnumerator LoadTitle()
+    {
+        SceneManager.LoadScene(TitleScene);
         yield return new WaitForSeconds(delay);
     }
 }

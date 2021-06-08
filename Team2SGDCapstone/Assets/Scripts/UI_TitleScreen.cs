@@ -7,7 +7,11 @@ using UnityEngine.SceneManagement;
 public class UI_TitleScreen : MonoBehaviour
 {
     private float delay = 2.0f;
+    public GameObject quitPanel;
+    public GameObject optionsPanel;
 
+    [SerializeField] private string IntroScene;
+    [SerializeField] private string LevelSelectScene;
 
     //Play button
     public void OnPressPlay()
@@ -16,7 +20,7 @@ public class UI_TitleScreen : MonoBehaviour
     }
     IEnumerator LoadIntro()
     {
-        SceneManager.LoadScene("Main_01_IntroCutscene");
+        SceneManager.LoadScene(IntroScene);
         yield return new WaitForSeconds(delay);
     }
 
@@ -27,20 +31,32 @@ public class UI_TitleScreen : MonoBehaviour
     }
     IEnumerator LoadLevelSelect()
     {
-        SceneManager.LoadScene("Main_02_LevelSelectScreen");
+        SceneManager.LoadScene(LevelSelectScene);
         yield return new WaitForSeconds(delay);
     }
 
-    //Options (UNFINISHED)
+    //Options (UNFINISHED)(MAYBE REMOVE LATER FOR SEPERATE SCRIPT???)
     public void OnPressOptions()
     {
-
+        optionsPanel.SetActive(true);
+    }
+    public void OnPressOptionsClose()
+    {
+        optionsPanel.SetActive(false);
     }
 
     //Quit button
-    public void OnPressQuit()
+    public void OnClickQuitPanel()
+    {
+        quitPanel.SetActive(true);
+    }
+    public void OnPressQuitYes()
     {
         Application.Quit();
         Debug.Log("Closing game...");
+    }
+    public void OnPressQuitNo()
+    {
+        quitPanel.SetActive(false);
     }
 }

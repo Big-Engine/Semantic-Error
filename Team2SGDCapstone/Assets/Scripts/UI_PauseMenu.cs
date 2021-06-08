@@ -84,5 +84,6 @@ public class UI_PauseMenu : MonoBehaviour
     {
         pausePanel.SetActive(true);
         quitPanel.SetActive(false);
+        optionsPanel.SetActive(false);
     }
 }
