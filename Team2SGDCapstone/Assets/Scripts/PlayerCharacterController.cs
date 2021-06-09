@@ -16,6 +16,7 @@ public class PlayerCharacterController : MonoBehaviour
     //isActive determines if the player can move at all. Use it to freeze the player.
     public bool isActive = true;
     [SerializeField] private bool isWallJumping = false;
+    [SerializeField] private bool isWallSliding = false;
     public float playerSpeed = 10.0f;
     public float jumpForce = 10.0f;
     public bool doubleJumpEnabled = false;
@@ -104,12 +105,11 @@ public class PlayerCharacterController : MonoBehaviour
         //Declaration of variables within the Animator Controller.
         bool isWalkingRight = animator.GetBool("isWalkingRight");
         bool isWalkingLeft = animator.GetBool("isWalkingLeft");
-        bool isPlayerGrounded = animator.GetBool("isPlayerGrounded");
 
         //Updates velocity float in the animator.
         animator.SetFloat("playerVelocity", velocity.y);
 
-        animator.SetBool("isPlayerGrounded", true);
+        //Updates the isPlayerGrounded bool in the animator.
         if(isGrounded)
         {
             animator.SetBool("isPlayerGrounded", true);
@@ -119,6 +119,7 @@ public class PlayerCharacterController : MonoBehaviour
             animator.SetBool("isPlayerGrounded", false);
         }
 
+        //Determines the direction the player is moving, or if they're not moving at all.
         if(inputDirection > 0.1 && !isWalkingRight)
         {
             animator.SetBool("isWalkingRight", true);
@@ -137,6 +138,15 @@ public class PlayerCharacterController : MonoBehaviour
             animator.SetBool("isWalkingLeft", false);
             //Debug.Log("Neither");
         }
+
+        if(isWallSliding)
+        {
+            animator.SetBool("isPlayerWallSliding", true);
+        }
+        else
+        {
+            animator.SetBool("isPlayerWallSliding", false);
+        }
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
@@ -145,10 +155,16 @@ public class PlayerCharacterController : MonoBehaviour
         if (!characterController.isGrounded && hit.normal.y < 0.1f)
         //If the player is touching a wall and they're not on the ground...
         {
+            //isWallSliding = true;
             if(velocity.y < 0)
             //Check if the player has negative velocity and set it to -5 so they slide down walls.
             {
                 velocity.y = -5.0f;
+                isWallSliding = true;
+            }
+            else if(velocity.y < -5.0f)
+            {
+                isWallSliding = false;
             }
 
             if(Input.GetKeyDown(KeyCode.Space))
@@ -159,8 +175,13 @@ public class PlayerCharacterController : MonoBehaviour
 
                 inputDirection = hit.normal.x;
                 isWallJumping = true;
+                isWallSliding = false;
                 StartCoroutine(WallJumpCoroutine());
             }
+        }
+        else if(!characterController.isGrounded && hit.normal.y != 0.1f)
+        {
+            isWallSliding = false;
         }
     }
 
@@ -173,7 +194,7 @@ public class PlayerCharacterController : MonoBehaviour
 
     private void CheckForDoubleJumpPermisson()
     {
-        if(doubleJumpEnabled)
+        if (doubleJumpEnabled)
         {
             canDoubleJump = true;
         }

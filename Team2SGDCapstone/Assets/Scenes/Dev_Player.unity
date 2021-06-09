@@ -4677,7 +4677,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4747279501521291753, guid: 70e0734656fd5434ab7f905665025e72, type: 3}
       propertyPath: doubleJumpEnabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5074150440069522509, guid: 70e0734656fd5434ab7f905665025e72, type: 3}
       propertyPath: m_RootOrder
