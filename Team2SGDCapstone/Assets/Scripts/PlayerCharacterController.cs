@@ -183,6 +183,11 @@ public class PlayerCharacterController : MonoBehaviour
         {
             isWallSliding = false;
         }
+        else if (characterController.isGrounded)
+        {
+            isWallSliding = false;
+            velocity.y = -6.0f;
+        }
     }
 
     IEnumerator WallJumpCoroutine()

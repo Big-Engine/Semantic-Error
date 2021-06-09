@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 341074696}
   m_Lens:
     FieldOfView: 60.1
     OrthographicSize: 5
@@ -331,7 +331,7 @@ Transform:
   m_GameObject: {fileID: 60828636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.81, y: 12.98, z: 21.39}
-  m_LocalScale: {x: 60, y: 40, z: 1}
+  m_LocalScale: {x: 61, y: 40, z: 1}
   m_Children: []
   m_Father: {fileID: 850813928}
   m_RootOrder: 10
@@ -426,7 +426,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125488048}
   m_LocalRotation: {x: -1, y: -0, z: 0, w: 0}
-  m_LocalPosition: {x: 0.67, y: 13.1, z: 0}
+  m_LocalPosition: {x: 0.1, y: 13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 694957674}
@@ -1040,6 +1040,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334340370}
   m_CullTransparentMesh: 1
+--- !u!4 &341074696 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5074150440069522509, guid: 70e0734656fd5434ab7f905665025e72, type: 3}
+  m_PrefabInstance: {fileID: 2032852865}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &388149486
 GameObject:
   m_ObjectHideFlags: 0
