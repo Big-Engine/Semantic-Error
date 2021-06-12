@@ -20,8 +20,8 @@ public class UI_TitleScreen : MonoBehaviour
     }
     IEnumerator LoadIntro()
     {
-        SceneManager.LoadScene(IntroScene);
         yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(IntroScene);   
     }
 
     //Level Select
@@ -31,8 +31,8 @@ public class UI_TitleScreen : MonoBehaviour
     }
     IEnumerator LoadLevelSelect()
     {
-        SceneManager.LoadScene(LevelSelectScene);
         yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(LevelSelectScene);
     }
 
     //Options (UNFINISHED)(MAYBE REMOVE LATER FOR SEPERATE SCRIPT???)

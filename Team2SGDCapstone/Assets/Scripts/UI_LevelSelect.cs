@@ -19,8 +19,8 @@ public class UI_LevelSelect : MonoBehaviour
     }
     IEnumerator LoadLevel1()
     {
-        SceneManager.LoadScene(LevelOne);
         yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(LevelOne);
     }
 
     //Level 2
@@ -30,8 +30,8 @@ public class UI_LevelSelect : MonoBehaviour
     }
     IEnumerator LoadLevel2()
     {
-        SceneManager.LoadScene(LevelTwo);
         yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(LevelTwo);
     }
 
     //Level 3
@@ -41,8 +41,8 @@ public class UI_LevelSelect : MonoBehaviour
     }
     IEnumerator LoadLevel3()
     {
-        SceneManager.LoadScene(LevelThree);
         yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(LevelThree);
     }
 
     //back button
@@ -52,7 +52,7 @@ public class UI_LevelSelect : MonoBehaviour
     }
     IEnumerator LoadTitle()
     {
-        SceneManager.LoadScene(TitleScene);
         yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(TitleScene);
     }
 }

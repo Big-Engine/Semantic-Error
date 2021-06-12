@@ -188,6 +188,12 @@ public class PlayerCharacterController : MonoBehaviour
             isWallSliding = false;
             velocity.y = -6.0f;
         }
+
+        //Ghost platform detection
+        if(hit.transform.tag == "GhostPlat")
+        {
+            hit.transform.SendMessage("StartAnim", SendMessageOptions.DontRequireReceiver);
+        }
     }
 
     IEnumerator WallJumpCoroutine()
