@@ -190,11 +190,17 @@ public class PlayerCharacterController : MonoBehaviour
         }
 
         //Ghost platform detection
-        if(hit.transform.tag == "GhostPlat")
+        if(isGrounded && hit.transform.tag == "GhostPlat")
         {
             hit.transform.SendMessage("StartAnim", SendMessageOptions.DontRequireReceiver);
         }
+        //Falling platform detection
+        if (isGrounded && hit.transform.tag == "FallPlat")
+        {
+            hit.transform.SendMessage("StartDrop", SendMessageOptions.DontRequireReceiver);
+        }
     }
+
 
     IEnumerator WallJumpCoroutine()
     //Freezes the player for a brief moment to allow the wall jump to push them back.

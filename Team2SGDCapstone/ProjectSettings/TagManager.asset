@@ -8,6 +8,8 @@ TagManager:
   - object
   - Ground
   - GhostPlat
+  - FallPlat
+  - Drill
   layers:
   - Default
   - TransparentFX
