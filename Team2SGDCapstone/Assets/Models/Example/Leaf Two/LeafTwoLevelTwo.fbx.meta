@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 7ddeb411a2b5f014cab6b42ce3c7bd01
+guid: fb67318f77523684893e68e5952bf7dc
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Barrel1
-    second: {fileID: 2100000, guid: adcac8fbc7605414cbf97f49b4b92663, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
