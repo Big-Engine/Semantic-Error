@@ -239,7 +239,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3430
+  m_Name: pb_Mesh24840
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3417,7 +3417,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-5102
+  m_Name: pb_Mesh24948
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3981,7 +3981,7 @@ GameObject:
   - component: {fileID: 1237077601}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Spring
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4558,7 +4558,7 @@ GameObject:
   - component: {fileID: 1455124527}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Spring
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4635,7 +4635,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1455124526}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: -1.4, z: 0}
+  m_LocalPosition: {x: -3, y: -1, z: 0}
   m_LocalScale: {x: 0.125, y: 1, z: 0.125}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5899,7 +5899,7 @@ GameObject:
   - component: {fileID: 1862099558}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Spring
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5912,7 +5912,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862099557}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -5976,7 +5976,7 @@ Transform:
   m_GameObject: {fileID: 1862099557}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5, y: -1, z: 0}
-  m_LocalScale: {x: 1, y: 0.25, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -6453,10 +6453,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4747279501521291753, guid: 70e0734656fd5434ab7f905665025e72, type: 3}
-      propertyPath: doubleJumpEnabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5074150440069522509, guid: 70e0734656fd5434ab7f905665025e72, type: 3}
       propertyPath: m_RootOrder
       value: 3

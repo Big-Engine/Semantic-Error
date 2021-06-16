@@ -10,6 +10,7 @@ public class PlayerCharacterController : MonoBehaviour
     private Vector3 velocity;
     [SerializeField] private float gravity = -9.81f;
     [SerializeField] private float fallForce = -10.0f;
+    [SerializeField] private float terminalVelocity = -50.0f;
     private CharacterController characterController;
 
     [Header("Player Controls")]
@@ -48,8 +49,10 @@ public class PlayerCharacterController : MonoBehaviour
             CheckForDoubleJumpPermisson();
         }
         
-
-
+        if(velocity.y < terminalVelocity)
+        {
+            velocity.y = terminalVelocity;
+        }
         
         if(isActive && !isWallJumping)
         //If the player is allowed to move, use InputDirection to go left and right.
@@ -199,8 +202,25 @@ public class PlayerCharacterController : MonoBehaviour
         {
             hit.transform.SendMessage("StartDrop", SendMessageOptions.DontRequireReceiver);
         }
+        //Spring Detection
+        if(hit.transform.tag == "Spring")
+        {
+            //velocity.y = Mathf.Sqrt(jumpForce * -4.0f * gravity);
+            velocity.y = 30;
+        }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Spring")
+        {
+            //Move the player up a slight amount so they don't get stuck on the ground.
+            //velocity.y = 2;
+            //characterController.Move(velocity * Time.deltaTime);
+            //Launch the player up.
+            //velocity.y = Mathf.Sqrt(jumpForce * -4.0f * gravity);
+        }
+    }
 
     IEnumerator WallJumpCoroutine()
     //Freezes the player for a brief moment to allow the wall jump to push them back.

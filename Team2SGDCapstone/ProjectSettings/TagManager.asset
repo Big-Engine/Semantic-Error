@@ -10,6 +10,7 @@ TagManager:
   - GhostPlat
   - FallPlat
   - Drill
+  - Spring
   layers:
   - Default
   - TransparentFX

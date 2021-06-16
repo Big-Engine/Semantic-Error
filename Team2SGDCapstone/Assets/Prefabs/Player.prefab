@@ -2840,6 +2840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: -60
   fallForce: -300
+  terminalVelocity: -25
   isActive: 1
   isWallJumping: 0
   isWallSliding: 0
