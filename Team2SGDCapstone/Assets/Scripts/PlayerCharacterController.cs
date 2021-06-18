@@ -62,7 +62,7 @@ public class PlayerCharacterController : MonoBehaviour
         }
         
         if (!isActive)
-        //Don't allow the player to move.
+        //If this is false, don't allow the player to move.
         {
             //moveVector = new Vector3(0, 0, 0);
             inputDirection = 0;
@@ -96,6 +96,11 @@ public class PlayerCharacterController : MonoBehaviour
 
         //This pulls the player downwards.
         velocity.y += gravity * Time.deltaTime;
+
+        if (velocity.y < -10.0f)
+        {
+            isWallSliding = false;
+        }
 
         AnimationHandler();
         //Applies vertical forces to the player.
@@ -165,10 +170,6 @@ public class PlayerCharacterController : MonoBehaviour
                 velocity.y = -5.0f;
                 isWallSliding = true;
             }
-            else if(velocity.y < -5.0f)
-            {
-                isWallSliding = false;
-            }
 
             if(Input.GetKeyDown(KeyCode.Space))
             //And if they press jump...
@@ -182,18 +183,21 @@ public class PlayerCharacterController : MonoBehaviour
                 StartCoroutine(WallJumpCoroutine());
             }
         }
-        else if(!characterController.isGrounded && hit.normal.y != 0.1f)
-        {
-            isWallSliding = false;
-        }
         else if (characterController.isGrounded)
         {
             isWallSliding = false;
             velocity.y = -6.0f;
         }
 
+        if (!characterController.isGrounded && hit.normal.y == -1.0f)
+        //If the player hits a ceiling, remove all vertical velocity and start falling.
+        {
+            Debug.DrawRay(hit.point, hit.normal, Color.red, 2.0f);
+            velocity.y = -1.0f;
+        }
+
         //Ghost platform detection
-        if(isGrounded && hit.transform.tag == "GhostPlat")
+        if (isGrounded && hit.transform.tag == "GhostPlat")
         {
             hit.transform.SendMessage("StartAnim", SendMessageOptions.DontRequireReceiver);
         }
@@ -212,19 +216,24 @@ public class PlayerCharacterController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Spring")
-        {
-            //Move the player up a slight amount so they don't get stuck on the ground.
-            //velocity.y = 2;
-            //characterController.Move(velocity * Time.deltaTime);
-            //Launch the player up.
-            //velocity.y = Mathf.Sqrt(jumpForce * -4.0f * gravity);
-        }
+        //This isn't currently being used, but it will be useful for triggering events
+        //later on in the project.
+        
+        //if(other.gameObject.tag == "Spring")
+        //{
+        //    //Move the player up a slight amount so they don't get stuck on the ground.
+        //    //velocity.y = 2;
+        //    //characterController.Move(velocity * Time.deltaTime);
+        //    //Launch the player up.
+        //    //velocity.y = Mathf.Sqrt(jumpForce * -4.0f * gravity);
+        //}
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Upward")
+        //Forces the player to move up. Used for upward transitions to prevent the camera
+        //from rapidly switching back & forth during vertical transitions.
         {
             velocity.y = 15.0f;
         }
