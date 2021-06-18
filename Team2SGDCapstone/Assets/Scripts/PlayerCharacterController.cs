@@ -222,6 +222,14 @@ public class PlayerCharacterController : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Upward")
+        {
+            velocity.y = 15.0f;
+        }
+    }
+
     IEnumerator WallJumpCoroutine()
     //Freezes the player for a brief moment to allow the wall jump to push them back.
     {

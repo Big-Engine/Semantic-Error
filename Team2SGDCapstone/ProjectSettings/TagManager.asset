@@ -11,6 +11,7 @@ TagManager:
   - FallPlat
   - Drill
   - Spring
+  - Upward
   layers:
   - Default
   - TransparentFX
