@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 2339717945135181948}
   - component: {fileID: 2339717945135181947}
   - component: {fileID: 2339717945135181946}
+  - component: {fileID: 6303314326214524615}
   - component: {fileID: 2339717945135181945}
   - component: {fileID: 2339717945135181950}
   - component: {fileID: 2339717945135181949}
+  - component: {fileID: 2375657772777910771}
   m_Layer: 3
   m_Name: Falling Platform
   m_TagString: FallPlat
@@ -28,9 +30,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2339717945135181944}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.9, y: 4.32, z: 0}
-  m_LocalScale: {x: 4.62405, y: 0.25, z: 2.5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.178942, y: 0.25, z: 2.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -85,7 +87,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2339717945135181945
+--- !u!65 &6303314326214524615
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,6 +100,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &2339717945135181945
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2339717945135181944}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!54 &2339717945135181950
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -124,5 +139,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c4e907276d9dcb43a052358af99858f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDuration: 3
+  terminalVelocity: -50
+--- !u!114 &2375657772777910771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2339717945135181944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a53616c673741244b037ebab48c81a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

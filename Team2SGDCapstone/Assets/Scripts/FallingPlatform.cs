@@ -6,8 +6,11 @@ public class FallingPlatform : MonoBehaviour
 {
     private Rigidbody rb;
     private Vector3 initialPosition;
+    private Vector3 velocity;
     private bool platformMovingBack;
     [SerializeField] private float fallDuration = 3;
+    [SerializeField] private float terminalVelocity = -50.0f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +19,13 @@ public class FallingPlatform : MonoBehaviour
         initialPosition = transform.position;
     }
 
+    private void Update()
+    {
+        if(rb.velocity.y < terminalVelocity)
+        {
+            velocity.y = terminalVelocity;
+        }
+    }
     void FixedUpdate()
     {
         if(platformMovingBack)
