@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MovingObject : MonoBehaviour
 {
+    //This script is for moving an object between two positions repeatedly
+
     public GameObject position1;
     Vector3 position1Location;
     public GameObject position2;
