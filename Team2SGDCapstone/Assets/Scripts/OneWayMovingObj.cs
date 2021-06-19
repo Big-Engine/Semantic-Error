@@ -22,27 +22,26 @@ public class OneWayMovingObj : MonoBehaviour
         isMoving = false;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if(isMoving)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
             StopObject();
-            //Debug.Log("Moving");
         }
     }
 
     private void OnTriggerEnter(Collider other)
+        //activates once triggered by player
     {
         if (other.tag == "Player")
         {
             isMoving = true;
-            //Debug.Log("HI");
         }
     }
 
     void StopObject()
+        //when object reaches destination, stop moving, wait for reset time, then reset position
     {
         if (Vector3.Distance(transform.position, targetPosition) < 1f)
         {
@@ -53,6 +52,7 @@ public class OneWayMovingObj : MonoBehaviour
     }
 
     void ResetPosition()
+        //resets position
     {
         transform.position = initialPosition;
     }
