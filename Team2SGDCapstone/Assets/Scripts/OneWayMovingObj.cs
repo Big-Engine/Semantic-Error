@@ -9,6 +9,7 @@ public class OneWayMovingObj : MonoBehaviour
     private Vector3 initialPosition;
     public GameObject targetLocation;
     private Vector3 targetPosition;
+    private OneWayPlatTrigger childScript; //used to handle trigger events with child object
 
     [SerializeField] float speed;
     [SerializeField] float resetTime;
@@ -17,6 +18,7 @@ public class OneWayMovingObj : MonoBehaviour
 
     void Start()
     {
+        childScript = transform.GetComponentInChildren<OneWayPlatTrigger>();
         initialPosition = transform.position;
         targetPosition = targetLocation.transform.position;
         isMoving = false;
@@ -31,7 +33,7 @@ public class OneWayMovingObj : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
         //activates once triggered by player
     {
         if (other.tag == "Player")
@@ -55,5 +57,6 @@ public class OneWayMovingObj : MonoBehaviour
         //resets position
     {
         transform.position = initialPosition;
+        childScript.EnableTrigger();
     }
 }
