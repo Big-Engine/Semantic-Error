@@ -16,21 +16,26 @@ public class PlayerCharacterController : MonoBehaviour
     [Header("Player Controls")]
     //isActive determines if the player can move at all. Use it to freeze the player.
     public bool isActive = true;
-    [SerializeField] private bool isWallJumping = false;
-    [SerializeField] private bool isWallSliding = false;
+    private bool isWallJumping = false;
+    private bool isWallSliding = false;
     public float playerSpeed = 10.0f;
     public float jumpForce = 10.0f;
     public bool doubleJumpEnabled = false;
     [SerializeField] private bool canDoubleJump = false;
+    private bool hasSprung = false;
 
     //These are used to check if the player is standing on anything in the "Ground" Layer.
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-    [SerializeField] private bool isGrounded;
+    private bool isGrounded;
 
     //Player Animations
     Animator animator;
+
+    [Header("Respawn System")]
+    //Handles variables for the player's respawn point.
+    public Vector3 currentRespawnLocation;
 
     void Start()
     {
@@ -89,7 +94,7 @@ public class PlayerCharacterController : MonoBehaviour
 
         //If the player lets go of the jump button before they reach the peak of their jump, they will instead
         //prematurely end their jump (Basically allows short jumps).
-        if(velocity.y > 0 && !Input.GetKey(KeyCode.Space) && isActive)
+        if(velocity.y > 0 && !Input.GetKey(KeyCode.Space) && !hasSprung && isActive)
         {
             velocity.y += fallForce * Time.deltaTime;
         }
@@ -159,6 +164,7 @@ public class PlayerCharacterController : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     //This handles events for colliding with other objects.
+    //Use this for solid collisions (I.E. objects that the player cannot pass through).
     {
         if (!characterController.isGrounded && hit.normal.y < 0.1f)
         //If the player is touching a wall and they're not on the ground...
@@ -175,7 +181,7 @@ public class PlayerCharacterController : MonoBehaviour
             //And if they press jump...
             {
                 //They perform a wall jump and reenable their double jump.
-                velocity.y = Mathf.Sqrt((jumpForce/2) * -2.0f * gravity);
+                velocity.y = Mathf.Sqrt((jumpForce/1.5f) * -2.0f * gravity);
 
                 inputDirection = hit.normal.x;
                 isWallJumping = true;
@@ -209,24 +215,21 @@ public class PlayerCharacterController : MonoBehaviour
         //Spring Detection
         if(hit.transform.tag == "Spring")
         {
-            //velocity.y = Mathf.Sqrt(jumpForce * -4.0f * gravity);
+            StartCoroutine(SpringCoroutine());
             velocity.y = 30;
         }
     }
 
     private void OnTriggerEnter(Collider other)
+    //Handles events for triggers. Use this for non-solid collisions (I.E. objects the player passes through).
     {
-        //This isn't currently being used, but it will be useful for triggering events
-        //later on in the project.
-        
-        //if(other.gameObject.tag == "Spring")
-        //{
-        //    //Move the player up a slight amount so they don't get stuck on the ground.
-        //    //velocity.y = 2;
-        //    //characterController.Move(velocity * Time.deltaTime);
-        //    //Launch the player up.
-        //    //velocity.y = Mathf.Sqrt(jumpForce * -4.0f * gravity);
-        //}
+        if (other.gameObject.tag == "Hazard_Fall")
+        {
+            Debug.Log("Player fell to their death.");
+            isActive = false;
+            characterController.enabled = false;
+            StartCoroutine(RespawnPlayer());
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -239,11 +242,28 @@ public class PlayerCharacterController : MonoBehaviour
         }
     }
 
+    IEnumerator RespawnPlayer()
+    //If the player dies, this respawns them at the most recent respawn point.
+    {
+        yield return new WaitForSeconds(0.5f);
+        this.gameObject.transform.position = currentRespawnLocation;
+        characterController.enabled = true;
+        isActive = true;
+    }
+
     IEnumerator WallJumpCoroutine()
     //Freezes the player for a brief moment to allow the wall jump to push them back.
     {
         yield return new WaitForSeconds(0.3f);
         isWallJumping = false;
+    }
+
+    IEnumerator SpringCoroutine()
+    //Allows the player to bounce on a spring without having to hold the jump button.
+    {
+        hasSprung = true;
+        yield return new WaitForSeconds(0.5f);
+        hasSprung = false;
     }
 
     private void CheckForDoubleJumpPermisson()

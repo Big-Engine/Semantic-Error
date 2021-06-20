@@ -12,6 +12,7 @@ TagManager:
   - Drill
   - Spring
   - Upward
+  - Hazard_Fall
   layers:
   - Default
   - TransparentFX
