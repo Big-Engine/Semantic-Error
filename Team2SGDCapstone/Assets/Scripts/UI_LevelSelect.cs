@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UI_LevelSelect : MonoBehaviour
 {
-    private float delay = 2.0f;
+    private float delay = 0.5f;
 
     [SerializeField] private string LevelOne;
     [SerializeField] private string LevelTwo;

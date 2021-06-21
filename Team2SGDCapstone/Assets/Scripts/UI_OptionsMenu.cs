@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI_OptionsMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Toggle fullscreenToggle;
+
+    private void Start()
     {
-        
+        fullscreenToggle.isOn = Screen.fullScreen;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ToggleFullScreen(bool fullscreen)
     {
-        
+        if(Screen.fullScreenMode == FullScreenMode.FullScreenWindow)
+        {
+            Screen.fullScreenMode = FullScreenMode.Windowed;
+        }
+        else
+        {
+            Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+        }
     }
 }

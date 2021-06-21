@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class UI_TitleScreen : MonoBehaviour
 {
-    private float delay = 2.0f;
+    private float delay = 0.5f;
     public GameObject quitPanel;
     public GameObject optionsPanel;
 

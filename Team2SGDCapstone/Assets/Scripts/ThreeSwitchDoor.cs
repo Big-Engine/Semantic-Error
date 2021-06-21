@@ -9,9 +9,21 @@ public class ThreeSwitchDoor : MonoBehaviour
     private int switchesActive;
     private bool isMoving;
     public Vector3 targetPosition;
+    public Vector3 initialPosition;
+
+    void OnEnable()
+    {
+        EventManager.OnReset += ResetPosition;
+    }
+
+    void OnDisable()
+    {
+        EventManager.OnReset -= ResetPosition;
+    }
 
     void Start()
     {
+        initialPosition = transform.position;
         isMoving = false;
     }
 
@@ -49,5 +61,12 @@ public class ThreeSwitchDoor : MonoBehaviour
                 Debug.Log("Door is Open");
             }
         }
+    }
+
+    private void ResetPosition()
+    {
+        switchesActive = 0;
+        transform.position = initialPosition;
+        gameObject.GetComponent<BoxCollider>().enabled = true;
     }
 }
