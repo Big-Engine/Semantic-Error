@@ -7,18 +7,29 @@ public class MovingObject : MonoBehaviour
     //This script is for moving an object between two positions repeatedly
 
     public GameObject position1;
-    Vector3 position1Location;
+    private Vector3 position1Location;
     public GameObject position2;
-    Vector3 position2Location;
+    private Vector3 position2Location;
+    private Vector3 initialPosition;
 
     [SerializeField] float speed;
     [SerializeField] float resetTime;
     Vector3 target;
 
+    void OnEnable()
+    {
+        EventManager.OnReset += ResetPosition;
+    }
+
+    void OnDisable()
+    {
+        EventManager.OnReset -= ResetPosition;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
+        initialPosition = transform.position;
         position1Location = position1.transform.position;
         position2Location = position2.transform.position;
         target = position1Location;
@@ -46,5 +57,11 @@ public class MovingObject : MonoBehaviour
             }
         }
         Invoke("ChangeTarget", resetTime);
+    }
+
+    void ResetPosition()
+    {
+        transform.position = initialPosition;
+        target = position1Location;
     }
 }

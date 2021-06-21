@@ -16,6 +16,16 @@ public class OneWayMovingObj : MonoBehaviour
 
     private bool isMoving;
 
+    void OnEnable()
+    {
+        EventManager.OnReset += ResetPosition;
+    }
+
+    void OnDisable()
+    {
+        EventManager.OnReset -= ResetPosition;
+    }
+
     void Start()
     {
         childScript = transform.GetComponentInChildren<OneWayPlatTrigger>();
@@ -56,6 +66,7 @@ public class OneWayMovingObj : MonoBehaviour
     void ResetPosition()
         //resets position
     {
+        isMoving = false;
         transform.position = initialPosition;
         childScript.EnableTrigger();
     }

@@ -37,6 +37,7 @@ public class PlayerCharacterController : MonoBehaviour
     //Handles variables for the player's respawn point.
     public Vector3 currentRespawnLocation;
 
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -229,6 +230,7 @@ public class PlayerCharacterController : MonoBehaviour
             isActive = false;
             characterController.enabled = false;
             StartCoroutine(RespawnPlayer());
+            gameObject.GetComponent<EventManager>().ResetObjects();
         }
     }
 

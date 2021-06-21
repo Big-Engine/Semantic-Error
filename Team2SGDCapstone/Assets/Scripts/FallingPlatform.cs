@@ -11,8 +11,16 @@ public class FallingPlatform : MonoBehaviour
     [SerializeField] private float fallDuration = 3;
     [SerializeField] private float terminalVelocity = -50.0f;
 
+    void OnEnable()
+    {
+        EventManager.OnReset += ResetPosition;
+    }
 
-    // Start is called before the first frame update
+    void OnDisable()
+    {
+        EventManager.OnReset -= ResetPosition;
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -58,5 +66,12 @@ public class FallingPlatform : MonoBehaviour
         rb.velocity = Vector3.zero;
         rb.isKinematic = true;
         platformMovingBack = true;
+    }
+
+    void ResetPosition()
+    {
+        transform.position = initialPosition;
+        rb.isKinematic = true;
+        platformMovingBack = false;
     }
 }
