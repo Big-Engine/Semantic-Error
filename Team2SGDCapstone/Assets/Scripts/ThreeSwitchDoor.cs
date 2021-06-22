@@ -65,6 +65,7 @@ public class ThreeSwitchDoor : MonoBehaviour
 
     private void ResetPosition()
     {
+        isMoving = false;
         switchesActive = 0;
         transform.position = initialPosition;
         gameObject.GetComponent<BoxCollider>().enabled = true;

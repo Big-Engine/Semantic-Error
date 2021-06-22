@@ -61,6 +61,8 @@ public class MovingObject : MonoBehaviour
 
     void ResetPosition()
     {
+        CancelInvoke();
+        ChangeTarget();
         transform.position = initialPosition;
         target = position1Location;
     }

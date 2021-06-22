@@ -42,6 +42,10 @@ public class PlayerCharacterController : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
+
+        //Sets the player's respawn point to their starting location.
+        //Used for level design and debugging.
+        currentRespawnLocation = characterController.transform.position;
     }
 
     void Update()
@@ -103,11 +107,6 @@ public class PlayerCharacterController : MonoBehaviour
         //This pulls the player downwards.
         velocity.y += gravity * Time.deltaTime;
 
-        if (velocity.y < -10.0f)
-        {
-            isWallSliding = false;
-        }
-
         AnimationHandler();
         //Applies vertical forces to the player.
         characterController.Move(velocity * Time.deltaTime);
@@ -153,7 +152,20 @@ public class PlayerCharacterController : MonoBehaviour
             //Debug.Log("Neither");
         }
 
-        if(isWallSliding)
+        if (velocity.y < -10.0f)
+        //Used to determine if the player has let go of a wall without wall jumping.
+        {
+            isWallSliding = false;
+        }
+
+        if (velocity.y > 0)
+        //If the player has postive velocity when touching a wall, prevent them from triggering
+        //the wall sliding animation.
+        {
+            isWallSliding = false;
+        }
+
+        if (isWallSliding)
         {
             animator.SetBool("isPlayerWallSliding", true);
         }
@@ -200,7 +212,7 @@ public class PlayerCharacterController : MonoBehaviour
         //If the player hits a ceiling, remove all vertical velocity and start falling.
         {
             Debug.DrawRay(hit.point, hit.normal, Color.red, 2.0f);
-            velocity.y = -1.0f;
+            velocity.y = -2.5f;
         }
 
         //Ghost platform detection
