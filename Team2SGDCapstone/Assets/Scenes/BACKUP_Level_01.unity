@@ -458,7 +458,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29226423}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -746,7 +746,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35515945}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1096,7 +1096,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 51019863}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1592,6 +1592,10 @@ PrefabInstance:
     - target: {fileID: 8562999764250025651, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: m_Name
       value: RespawnTrigger (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562999764250025653, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8562999764250025654, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: player
@@ -3410,7 +3414,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101923128}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4259,6 +4263,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RespawnTrigger (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 8562999764250025653, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8562999764250025654, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: player
       value: 
@@ -4508,7 +4516,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123775337}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4742,6 +4750,10 @@ PrefabInstance:
     - target: {fileID: 8562999764250025651, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: m_Name
       value: RespawnTrigger (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562999764250025653, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8562999764250025654, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: player
@@ -6588,7 +6600,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164662256}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -9687,6 +9699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RespawnTrigger (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8562999764250025653, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8562999764250025654, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: player
       value: 
@@ -9818,7 +9834,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 286663131}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -10152,7 +10168,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293146013}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -11728,7 +11744,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346751029}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -13446,7 +13462,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378534875}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -15334,6 +15350,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RespawnTrigger (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 8562999764250025653, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8562999764250025654, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: player
       value: 
@@ -15465,7 +15485,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437923410}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -16124,6 +16144,10 @@ PrefabInstance:
     - target: {fileID: 8562999764250025651, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: m_Name
       value: RespawnTrigger (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562999764250025653, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8562999764250025654, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: player
@@ -16838,7 +16862,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458119778}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -17447,7 +17471,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 470166090}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -17789,6 +17813,10 @@ PrefabInstance:
     - target: {fileID: 8562999764250025651, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: m_Name
       value: RespawnTrigger (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562999764250025653, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8562999764250025654, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: player
@@ -19194,7 +19222,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501839700}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -19636,6 +19664,10 @@ PrefabInstance:
     - target: {fileID: 9076805443764660866, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
       propertyPath: m_Name
       value: RespawnPosition (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076805443764660867, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
@@ -20314,6 +20346,10 @@ PrefabInstance:
     - target: {fileID: 8562999764250025651, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: m_Name
       value: RespawnTrigger (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562999764250025653, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8562999764250025654, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: player
@@ -21200,7 +21236,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586822578}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -23232,6 +23268,10 @@ PrefabInstance:
     - target: {fileID: 9076805443764660866, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
       propertyPath: m_Name
       value: RespawnPosition (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076805443764660867, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
@@ -26339,7 +26379,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 658466561}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -31764,7 +31804,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702119162}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -32657,7 +32697,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738998907}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -32966,6 +33006,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RespawnTrigger (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8562999764250025653, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8562999764250025654, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: player
       value: 
@@ -33087,6 +33131,10 @@ PrefabInstance:
     - target: {fileID: 9076805443764660866, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
       propertyPath: m_Name
       value: RespawnPosition (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076805443764660867, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
@@ -34329,7 +34377,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786846245}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -36650,7 +36698,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796850489}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -36928,6 +36976,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RespawnTrigger (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 8562999764250025653, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8562999764250025654, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: player
       value: 
@@ -37059,7 +37111,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 809662001}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -37606,7 +37658,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 819616282}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -38771,7 +38823,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851854569}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -40574,6 +40626,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RespawnTrigger (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8562999764250025653, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8562999764250025654, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: player
       value: 
@@ -40726,6 +40782,10 @@ PrefabInstance:
     - target: {fileID: 8562999764250025651, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: m_Name
       value: RespawnTrigger (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562999764250025653, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8562999764250025654, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: player
@@ -41080,7 +41140,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900126191}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -43320,7 +43380,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933168615}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -44563,6 +44623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RespawnTrigger (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 8562999764250025653, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8562999764250025654, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: player
       value: 
@@ -44737,6 +44801,10 @@ PrefabInstance:
     - target: {fileID: 9076805443764660866, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
       propertyPath: m_Name
       value: RespawnPosition (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076805443764660867, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
@@ -45329,6 +45397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RespawnPosition (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 9076805443764660867, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
 --- !u!4 &989641262 stripped
@@ -45351,6 +45423,10 @@ PrefabInstance:
     - target: {fileID: 8562999764250025651, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: m_Name
       value: RespawnTrigger (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562999764250025653, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8562999764250025654, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: player
@@ -45741,6 +45817,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RespawnPosition (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 9076805443764660867, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
 --- !u!4 &998747468 stripped
@@ -45763,6 +45843,10 @@ PrefabInstance:
     - target: {fileID: 8562999764250025651, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: m_Name
       value: RespawnTrigger (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562999764250025653, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8562999764250025654, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: player
@@ -47435,7 +47519,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055189911}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -47723,7 +47807,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056804088}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -48211,6 +48295,10 @@ PrefabInstance:
     - target: {fileID: 9076805443764660866, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
       propertyPath: m_Name
       value: RespawnPosition (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076805443764660867, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
@@ -49122,7 +49210,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110693292}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -52280,7 +52368,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114647890}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -52558,6 +52646,10 @@ PrefabInstance:
     - target: {fileID: 9076805443764660866, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
       propertyPath: m_Name
       value: RespawnPosition (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076805443764660867, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
@@ -53163,6 +53255,10 @@ PrefabInstance:
     - target: {fileID: 8562999764250025651, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: m_Name
       value: RespawnTrigger (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562999764250025653, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8562999764250025654, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: player
@@ -57058,7 +57154,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167063471}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -57292,6 +57388,10 @@ PrefabInstance:
     - target: {fileID: 8562999764250025651, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: m_Name
       value: RespawnTrigger (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562999764250025653, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8562999764250025654, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: player
@@ -58790,7 +58890,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201966311}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -59876,7 +59976,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1243585318}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -60154,6 +60254,10 @@ PrefabInstance:
     - target: {fileID: 9076805443764660866, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
       propertyPath: m_Name
       value: RespawnPosition (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076805443764660867, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
@@ -62293,6 +62397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RespawnPosition (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 9076805443764660867, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
 --- !u!4 &1285419425 stripped
@@ -63341,6 +63449,10 @@ PrefabInstance:
     - target: {fileID: 9076805443764660866, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
       propertyPath: m_Name
       value: RespawnPosition (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076805443764660867, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
@@ -65362,7 +65474,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375797815}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -65641,6 +65753,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RespawnPosition (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9076805443764660867, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
 --- !u!4 &1376088597 stripped
@@ -65717,7 +65833,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379348435}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -66150,6 +66266,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RespawnPosition (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9076805443764660867, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
 --- !u!4 &1399021666 stripped
@@ -66226,7 +66346,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407024516}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -66897,7 +67017,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412881281}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -67340,6 +67460,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RespawnPosition (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 9076805443764660867, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
 --- !u!4 &1415202952 stripped
@@ -67416,7 +67540,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1415957143}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -67970,7 +68094,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420608214}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -70584,7 +70708,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489652574}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -70872,7 +70996,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489982785}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -71160,7 +71284,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491303253}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -74305,6 +74429,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RespawnPosition (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 9076805443764660867, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
 --- !u!4 &1526031886 stripped
@@ -74545,7 +74673,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528391347}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -74945,6 +75073,10 @@ PrefabInstance:
     - target: {fileID: 9076805443764660866, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
       propertyPath: m_Name
       value: RespawnPosition (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076805443764660867, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
@@ -76433,7 +76565,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581740800}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -76963,6 +77095,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RespawnPosition (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 9076805443764660867, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
 --- !u!4 &1587479643 stripped
@@ -77304,7 +77440,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611523063}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -77818,7 +77954,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1630472730}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -79152,7 +79288,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709078005}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -82336,7 +82472,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784518319}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -85856,6 +85992,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RespawnTrigger (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8562999764250025653, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8562999764250025654, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: player
       value: 
@@ -86100,7 +86240,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834881964}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -88141,7 +88281,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855112530}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -88420,6 +88560,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RespawnPosition (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 9076805443764660867, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
 --- !u!4 &1859869625 stripped
@@ -88544,6 +88688,10 @@ PrefabInstance:
     - target: {fileID: 9076805443764660866, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
       propertyPath: m_Name
       value: RespawnPosition (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076805443764660867, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
@@ -96005,6 +96153,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RespawnTrigger (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 8562999764250025653, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8562999764250025654, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: player
       value: 
@@ -96136,7 +96288,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056598385}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -96424,7 +96576,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057113525}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -96947,7 +97099,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070856022}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -97483,7 +97635,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2084433085}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -99527,6 +99679,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RespawnTrigger (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8562999764250025653, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8562999764250025654, guid: c631c53acaf221d43bc938194bccd38c, type: 3}
       propertyPath: player
       value: 
@@ -99639,6 +99795,10 @@ PrefabInstance:
     - target: {fileID: 9076805443764660866, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
       propertyPath: m_Name
       value: RespawnPosition (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076805443764660867, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b67b63dd03372418561e79d39a5f30, type: 3}
