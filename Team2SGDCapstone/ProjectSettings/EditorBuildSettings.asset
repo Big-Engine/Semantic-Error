@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dev_Player.unity
     guid: 0d00ec1dbcbb09e488a10b92f917961e
+  - enabled: 1
+    path: Assets/Scenes/BACKUP_Level_01.unity
+    guid: b3a4fae9d6ea87040989065672926390
   m_configObjects: {}
