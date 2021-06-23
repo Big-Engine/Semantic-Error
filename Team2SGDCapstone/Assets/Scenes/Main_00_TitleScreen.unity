@@ -1981,11 +1981,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: e94d6baa09d46b343889edafa2448bf6, type: 2}
-  m_audioClip: {fileID: 8300000, guid: c109b43796574f640af3f308fa827b4d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: af348a562f8f00a44938482eb124ffa4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.82
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2558,7 +2558,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -8.829}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -27, y: 61}
+  m_AnchoredPosition: {x: 2, y: 53}
   m_SizeDelta: {x: -255.5007, y: -335.5359}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1546750926
@@ -2594,7 +2594,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: V.0.0
+  m_Text: V.0.0.1
 --- !u!222 &1546750927
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -66,6 +66,7 @@ public class OneWayMovingObj : MonoBehaviour
     void ResetPosition()
         //resets position
     {
+        CancelInvoke();
         isMoving = false;
         transform.position = initialPosition;
         childScript.EnableTrigger();
