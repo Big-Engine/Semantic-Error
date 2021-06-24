@@ -13,6 +13,7 @@ TagManager:
   - Spring
   - Upward
   - Hazard_Fall
+  - Reverse
   layers:
   - Default
   - TransparentFX

@@ -8,6 +8,7 @@ public class PlayerCharacterController : MonoBehaviour
     private float inputDirection;
     private Vector3 moveVector;
     private Vector3 velocity;
+    private Vector3 trueVelocity;
     [SerializeField] private float gravity = -9.81f;
     [SerializeField] private float fallForce = -10.0f;
     [SerializeField] private float terminalVelocity = -50.0f;
@@ -23,6 +24,7 @@ public class PlayerCharacterController : MonoBehaviour
     public bool doubleJumpEnabled = false;
     [SerializeField] private bool canDoubleJump = false;
     private bool hasSprung = false;
+    private bool isReversed = false;
 
     //These are used to check if the player is standing on anything in the "Ground" Layer.
     public Transform groundCheck;
@@ -107,9 +109,20 @@ public class PlayerCharacterController : MonoBehaviour
         //This pulls the player downwards.
         velocity.y += gravity * Time.deltaTime;
 
+        if(isReversed)
+        //When the player's gravity is reversed, invert their velocity.
+        {
+            trueVelocity = -velocity;
+        }
+        else
+        {
+            trueVelocity = velocity;
+        }
+
         AnimationHandler();
+
         //Applies vertical forces to the player.
-        characterController.Move(velocity * Time.deltaTime);
+        characterController.Move(trueVelocity * Time.deltaTime);
     }
 
     private void AnimationHandler()
@@ -179,11 +192,12 @@ public class PlayerCharacterController : MonoBehaviour
     //This handles events for colliding with other objects.
     //Use this for solid collisions (I.E. objects that the player cannot pass through).
     {
-        if (!characterController.isGrounded && hit.normal.y < 0.1f)
+        if (!isGrounded && hit.normal.y < 0.001f && hit.normal.y > -0.001f)
         //If the player is touching a wall and they're not on the ground...
         {
+            Debug.DrawRay(hit.point, hit.normal, Color.red, 2.0f);
             //isWallSliding = true;
-            if(velocity.y < 0)
+            if (velocity.y < 0)
             //Check if the player has negative velocity and set it to -5 so they slide down walls.
             {
                 velocity.y = -5.0f;
@@ -202,13 +216,8 @@ public class PlayerCharacterController : MonoBehaviour
                 StartCoroutine(WallJumpCoroutine());
             }
         }
-        else if (characterController.isGrounded)
-        {
-            isWallSliding = false;
-            velocity.y = -6.0f;
-        }
 
-        if (!characterController.isGrounded && hit.normal.y == -1.0f)
+        if (!characterController.isGrounded && ((hit.normal.y == -1.0f && !isReversed) || (hit.normal.y == 1.0f && isReversed)))
         //If the player hits a ceiling, remove all vertical velocity and start falling.
         {
             Debug.DrawRay(hit.point, hit.normal, Color.red, 2.0f);
@@ -244,6 +253,13 @@ public class PlayerCharacterController : MonoBehaviour
             StartCoroutine(RespawnPlayer());
             gameObject.GetComponent<EventManager>().ResetObjects();
         }
+        //Reverse Gravity Dectection
+        if (other.gameObject.tag == "Reverse")
+        {
+            isReversed = isReversed ? false : true;
+            Debug.Log("isReverse: " + isReversed);
+            ReversePlayerGravity();
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -253,6 +269,21 @@ public class PlayerCharacterController : MonoBehaviour
         //from rapidly switching back & forth during vertical transitions.
         {
             velocity.y = 15.0f;
+        }
+    }
+
+    private void ReversePlayerGravity()
+    {
+        velocity.y = 0;
+        if(isReversed)
+        //When gravity switches, the player falls upwards.
+        {
+            transform.localScale = new Vector3(1, -1, 1);
+        }
+        else
+        //Restores normal gravity.
+        {
+            transform.localScale = new Vector3(1, 1, 1);
         }
     }
 
@@ -286,5 +317,11 @@ public class PlayerCharacterController : MonoBehaviour
         {
             canDoubleJump = true;
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(groundCheck.position, groundDistance);
     }
 }
