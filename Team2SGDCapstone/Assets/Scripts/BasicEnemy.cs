@@ -12,6 +12,7 @@ public class BasicEnemy : MonoBehaviour
 
     [SerializeField] float speed;
     [SerializeField] float resetTime;
+    [SerializeField] float scaleSize;
     Vector3 target;
 
     public GameObject snake;
@@ -50,12 +51,12 @@ public class BasicEnemy : MonoBehaviour
             if (target == position1Location)
             {
                 target = position2Location;
-                snake.transform.localScale = new Vector3((float)0.01f, (float)0.01f, (float)-0.01f);
+                snake.transform.localScale = new Vector3((float)scaleSize, (float)scaleSize, (float)-scaleSize);
             }
             else
             {
                 target = position1Location;
-                snake.transform.localScale = new Vector3((float)0.01f, (float)0.01f, (float)0.01f);
+                snake.transform.localScale = new Vector3((float)scaleSize, (float)scaleSize, (float)scaleSize);
             }
         }
         Invoke("ChangeTarget", resetTime);
@@ -66,7 +67,7 @@ public class BasicEnemy : MonoBehaviour
         CancelInvoke();
         ChangeTarget();
         transform.position = initialPosition;
-        transform.localScale = new Vector3((float)0.01f, (float)0.01f, (float)0.01f);
+        transform.localScale = new Vector3((float)scaleSize, (float)scaleSize, (float)scaleSize);
         target = position1Location;
     }
 }
