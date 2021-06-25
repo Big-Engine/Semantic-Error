@@ -7,12 +7,14 @@ public class PlayerCharacterController : MonoBehaviour
     [Header("Player Velocity")]
     private float inputDirection;
     private Vector3 moveVector;
+    public Vector3 conveyorVector;
     private Vector3 velocity;
     private Vector3 trueVelocity;
     [SerializeField] private float gravity = -9.81f;
     [SerializeField] private float fallForce = -10.0f;
     [SerializeField] private float terminalVelocity = -50.0f;
-    private CharacterController characterController;
+    //Set this to public so it's accessible through other scripts.
+    public CharacterController characterController;
 
     [Header("Player Controls")]
     //isActive determines if the player can move at all. Use it to freeze the player.
@@ -38,7 +40,6 @@ public class PlayerCharacterController : MonoBehaviour
     [Header("Respawn System")]
     //Handles variables for the player's respawn point.
     public Vector3 currentRespawnLocation;
-
 
     void Start()
     {
@@ -81,6 +82,9 @@ public class PlayerCharacterController : MonoBehaviour
         }
 
         moveVector = new Vector3(inputDirection, 0f, 0f);
+
+        //Combines the player's movement with that of a conveyor belt (If they're standing on one).
+        moveVector += conveyorVector;
 
         //Applies horizontal forces to the player.
         characterController.Move(moveVector * playerSpeed * Time.deltaTime);
