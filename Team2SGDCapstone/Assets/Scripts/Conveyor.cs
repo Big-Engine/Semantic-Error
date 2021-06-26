@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Conveyor : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
     private PlayerCharacterController playerCharacterController;
     public float speed;
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         playerCharacterController = player.GetComponent<PlayerCharacterController>();
     }
 

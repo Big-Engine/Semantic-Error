@@ -21,6 +21,7 @@ public class PlayerCharacterController : MonoBehaviour
     public bool isActive = true;
     private bool isWallJumping = false;
     private bool isWallSliding = false;
+    private float wallDirection;
     public float playerSpeed = 10.0f;
     public float jumpForce = 10.0f;
     public bool doubleJumpEnabled = false;
@@ -108,6 +109,21 @@ public class PlayerCharacterController : MonoBehaviour
         if(velocity.y > 0 && !Input.GetKey(KeyCode.Space) && !hasSprung && isActive)
         {
             velocity.y += fallForce * Time.deltaTime;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && isWallSliding && !isGrounded)
+        //If the player presses jump while wall sliding...
+        {
+            Debug.Log("Tried to wall jump");
+            //They perform a wall jump and reenable their double jump.
+            velocity.y = Mathf.Sqrt((jumpForce / 1.5f) * -2.0f * gravity);
+
+            inputDirection = wallDirection;
+            isWallJumping = true;
+            isWallSliding = false;
+            StartCoroutine(WallJumpCoroutine());
+            //Previously this function was done inside OnControllerColliderHit. I left a comment
+            //detailing why it was moved here.
         }
 
         //This pulls the player downwards.
@@ -206,18 +222,10 @@ public class PlayerCharacterController : MonoBehaviour
             {
                 velocity.y = -5.0f;
                 isWallSliding = true;
-            }
-
-            if(Input.GetKeyDown(KeyCode.Space))
-            //And if they press jump...
-            {
-                //They perform a wall jump and reenable their double jump.
-                velocity.y = Mathf.Sqrt((jumpForce/1.5f) * -2.0f * gravity);
-
-                inputDirection = hit.normal.x;
-                isWallJumping = true;
-                isWallSliding = false;
-                StartCoroutine(WallJumpCoroutine());
+                wallDirection = hit.normal.x;
+                //wallDirection is used to ensure that the player performs a wall jump every time they
+                //press jump. Previously the input was done here, but it was moved because OnControllerColliderHit
+                //doesn't always run on every frame.
             }
         }
 
@@ -294,8 +302,9 @@ public class PlayerCharacterController : MonoBehaviour
     IEnumerator RespawnPlayer()
     //If the player dies, this respawns them at the most recent respawn point.
     {
+        conveyorVector = new Vector3(0, 0, 0);
         yield return new WaitForSeconds(0.5f);
-        this.gameObject.transform.position = currentRespawnLocation;
+        gameObject.transform.position = currentRespawnLocation;
         characterController.enabled = true;
         isActive = true;
     }
@@ -323,9 +332,9 @@ public class PlayerCharacterController : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(groundCheck.position, groundDistance);
-    }
+    //private void OnDrawGizmosSelected()
+    //{
+    //    Gizmos.color = Color.yellow;
+    //    Gizmos.DrawSphere(groundCheck.position, groundDistance);
+    //}
 }
