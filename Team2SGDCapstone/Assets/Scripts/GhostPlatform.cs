@@ -9,6 +9,16 @@ public class GhostPlatform : MonoBehaviour
     [SerializeField] bool canReset;
     [SerializeField] float resetTime;
 
+    void OnEnable()
+    {
+        EventManager.OnReset += ResetPosition;
+    }
+
+    void OnDisable()
+    {
+        EventManager.OnReset -= ResetPosition;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,13 +36,13 @@ public class GhostPlatform : MonoBehaviour
     {
         if(canReset)
         {
-            StartCoroutine(Reset());
+            Invoke("ResetPosition", resetTime);
         }
     }
 
-    IEnumerator Reset()
+    void ResetPosition()
     {
-        yield return new WaitForSeconds(resetTime);
+        CancelInvoke();
         myAnim.SetBool("Trigger", false);
     }
 }
