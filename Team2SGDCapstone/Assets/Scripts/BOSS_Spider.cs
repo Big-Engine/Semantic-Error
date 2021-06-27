@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class BOSS_Spider : MonoBehaviour
 {
-    public Vector3 endPosition;
     public Vector3 initialPosition;
-    private Vector3 lastPosition;
+    public Vector3 firstCheckpoint;
+    public Vector3 secondCheckpoint;
+    public Vector3 thirdCheckpoint;
+    public Vector3 endPosition;
+
+    private Vector3 currentCheckpoint;
+    private Vector3 nextCheckpoint;
     [SerializeField] float speed;
 
     private bool fallingStart;
@@ -43,20 +48,42 @@ public class BOSS_Spider : MonoBehaviour
         {
             if(isMoving)
             {
-                transform.position = Vector3.MoveTowards(transform.position, endPosition, speed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, nextCheckpoint, speed * Time.deltaTime);
+                WhichCheckpoint();
             }
             if (Vector3.Distance(transform.position, endPosition) < 1f && !isIdle)
             {
-                IdleAnimation();
+                IdleAnimation();               
                 isIdle = true;
             }
                 
         }
     }
 
+    void WhichCheckpoint()
+    {
+        if(Vector3.Distance(transform.position, firstCheckpoint) < 1f && nextCheckpoint == firstCheckpoint)
+        {
+            currentCheckpoint = firstCheckpoint;
+            nextCheckpoint = secondCheckpoint;
+        }
+        else if(Vector3.Distance(transform.position, secondCheckpoint) < 1f && nextCheckpoint == secondCheckpoint)
+        {
+            currentCheckpoint = secondCheckpoint;
+            nextCheckpoint = thirdCheckpoint;
+        }
+        else if (Vector3.Distance(transform.position, thirdCheckpoint) < 1f && nextCheckpoint == thirdCheckpoint)
+        {
+            currentCheckpoint = thirdCheckpoint;
+            nextCheckpoint = endPosition;
+        }
+
+    }
+
     void StartCycle()
     {
-        lastPosition = transform.position;//initial position
+        nextCheckpoint = firstCheckpoint;//initial position
+        currentCheckpoint = initialPosition;
         spiderAnim.SetBool("isScreaming", false);
         spiderAnim.SetBool("isWalking", true);
         fallingStart = false;
@@ -82,6 +109,6 @@ public class BOSS_Spider : MonoBehaviour
 
     void ResetPosition()
     {
-        transform.position = lastPosition;
+        transform.position = currentCheckpoint;
     }
 }

@@ -11,6 +11,7 @@ public class BossSpiderSpawn : MonoBehaviour
         if(other.tag == "Player")
         {
             SpiderBoss.SetActive(true);
+            GetComponent<BoxCollider>().enabled = false;
         }
     }
 }
