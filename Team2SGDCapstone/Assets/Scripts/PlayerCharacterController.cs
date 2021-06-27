@@ -215,8 +215,7 @@ public class PlayerCharacterController : MonoBehaviour
         if (!isGrounded && hit.normal.y < 0.001f && hit.normal.y > -0.001f)
         //If the player is touching a wall and they're not on the ground...
         {
-            Debug.DrawRay(hit.point, hit.normal, Color.red, 2.0f);
-            //isWallSliding = true;
+            //Debug.DrawRay(hit.point, hit.normal, Color.red, 2.0f);
             if (velocity.y < 0)
             //Check if the player has negative velocity and set it to -5 so they slide down walls.
             {
@@ -266,10 +265,9 @@ public class PlayerCharacterController : MonoBehaviour
             gameObject.GetComponent<EventManager>().ResetObjects();
         }
         //Reverse Gravity Dectection
-        if (other.gameObject.tag == "Reverse")
+        if (other.gameObject.CompareTag("Reverse"))
         {
             isReversed = isReversed ? false : true;
-            Debug.Log("isReverse: " + isReversed);
             ReversePlayerGravity();
         }
     }
