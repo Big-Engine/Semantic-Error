@@ -15,6 +15,8 @@ public class PlayerCharacterController : MonoBehaviour
     [SerializeField] private float terminalVelocity = -50.0f;
     //Set this to public so it's accessible through other scripts.
     public CharacterController characterController;
+    //reference to player audio sfx script
+    public Audio_PlayerSFX playerSFX;
 
     [Header("Player Controls")]
     //isActive determines if the player can move at all. Use it to freeze the player.
@@ -33,7 +35,8 @@ public class PlayerCharacterController : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-    private bool isGrounded;
+    public bool isGrounded;
+    public bool isMoving;
 
     //Player Animations
     Animator animator;
@@ -46,6 +49,7 @@ public class PlayerCharacterController : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
+        playerSFX = GetComponent<Audio_PlayerSFX>();
 
         //Sets the player's respawn point to their starting location.
         //Used for level design and debugging.
@@ -95,6 +99,9 @@ public class PlayerCharacterController : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpForce * -2.0f * gravity);
             CheckForDoubleJumpPermisson();
+
+            //play jump sound
+            playerSFX.jump1.Play();
         }
 
         //This causes a double jump if the player is not on the ground but has a reserved double jump.
@@ -102,6 +109,9 @@ public class PlayerCharacterController : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpForce * -2.0f * gravity);
             canDoubleJump = false;
+
+            //play jump sound 2
+            playerSFX.jump2.Play();
         }
 
         //If the player lets go of the jump button before they reach the peak of their jump, they will instead
@@ -124,6 +134,9 @@ public class PlayerCharacterController : MonoBehaviour
             StartCoroutine(WallJumpCoroutine());
             //Previously this function was done inside OnControllerColliderHit. I left a comment
             //detailing why it was moved here.
+
+            //play jump sound
+            playerSFX.jump1.Play();
         }
 
         //This pulls the player downwards.
@@ -147,6 +160,7 @@ public class PlayerCharacterController : MonoBehaviour
 
     private void AnimationHandler()
     //Handles the animations. Leave this alone or risk breaking everything!
+    //Zack G. - I am using this to also handle player SFX
     {
         //Declaration of variables within the Animator Controller.
         bool isWalkingRight = animator.GetBool("isWalkingRight");
@@ -170,18 +184,21 @@ public class PlayerCharacterController : MonoBehaviour
         {
             animator.SetBool("isWalkingRight", true);
             animator.SetBool("isWalkingLeft", false);
+            isMoving = true;
             //Debug.Log("Right");
         }
         else if(inputDirection < -0.1 && !isWalkingLeft)
         {
             animator.SetBool("isWalkingLeft", true);
             animator.SetBool("isWalkingRight", false);
+            isMoving = true;
             //Debug.Log("Left");
         }
         else if (inputDirection == 0 && (isWalkingRight || isWalkingLeft))
         {
             animator.SetBool("isWalkingRight", false);
             animator.SetBool("isWalkingLeft", false);
+            isMoving = false;
             //Debug.Log("Neither");
         }
 
@@ -250,6 +267,9 @@ public class PlayerCharacterController : MonoBehaviour
         {
             StartCoroutine(SpringCoroutine());
             velocity.y = 30;
+
+            //play jump sound 2
+            playerSFX.jump2.Play();
         }
     }
 
