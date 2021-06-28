@@ -14,7 +14,7 @@ public class EventManager : MonoBehaviour
 
     IEnumerator Delay()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         OnReset?.Invoke();
         Debug.Log("Event called");
     }
