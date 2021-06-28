@@ -16,7 +16,10 @@ public class PlayerCharacterController : MonoBehaviour
     //Set this to public so it's accessible through other scripts.
     public CharacterController characterController;
     //reference to player audio sfx script
-    public Audio_PlayerSFX playerSFX;
+    private Audio_PlayerSFX playerSFX;
+    //reference to the black screen for dying
+    private GameObject blackScreen;
+    private FadeToBlack blackScreenScript;
 
     [Header("Player Controls")]
     //isActive determines if the player can move at all. Use it to freeze the player.
@@ -50,6 +53,8 @@ public class PlayerCharacterController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         playerSFX = GetComponent<Audio_PlayerSFX>();
+        blackScreen = GameObject.FindGameObjectWithTag("BlackScreen");
+        blackScreenScript = blackScreen.GetComponent<FadeToBlack>();
 
         //Sets the player's respawn point to their starting location.
         //Used for level design and debugging.
@@ -281,14 +286,21 @@ public class PlayerCharacterController : MonoBehaviour
             Debug.Log("Player fell to their death.");
             isActive = false;
             characterController.enabled = false;
+            blackScreenScript.DeathScreen();//fade to black and back
             StartCoroutine(RespawnPlayer());
             gameObject.GetComponent<EventManager>().ResetObjects();
+
+            //play sfx
+            playerSFX.death1.Play();
         }
         //Reverse Gravity Dectection
         if (other.gameObject.CompareTag("Reverse"))
         {
             isReversed = isReversed ? false : true;
             ReversePlayerGravity();
+
+            //play sfx
+            playerSFX.gravity1.Play();
         }
     }
 
@@ -321,7 +333,7 @@ public class PlayerCharacterController : MonoBehaviour
     //If the player dies, this respawns them at the most recent respawn point.
     {
         conveyorVector = new Vector3(0, 0, 0);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         gameObject.transform.position = currentRespawnLocation;
         characterController.enabled = true;
         isActive = true;

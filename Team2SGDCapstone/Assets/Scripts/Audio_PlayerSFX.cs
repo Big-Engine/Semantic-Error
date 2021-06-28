@@ -8,6 +8,8 @@ public class Audio_PlayerSFX : MonoBehaviour
     public AudioSource walkingStone;
     public AudioSource jump1;
     public AudioSource jump2;
+    public AudioSource death1;
+    public AudioSource gravity1;
 
     // Start is called before the first frame update
     void Start()
