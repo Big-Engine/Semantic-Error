@@ -8,6 +8,7 @@ public class ThreeSwitchDoorChild : MonoBehaviour
 
     private Transform parent;
     private ThreeSwitchDoor parentScript;
+    private AudioSource switchSFX;
 
     void OnEnable()
     {
@@ -22,6 +23,7 @@ public class ThreeSwitchDoorChild : MonoBehaviour
     void Start()
         //Get the parent script
     {
+        switchSFX = GetComponent<AudioSource>();
         parent = transform.parent.transform;
         parentScript = transform.parent.GetComponent<ThreeSwitchDoor>();
         gameObject.GetComponent<Renderer>().material.color = Color.red;
@@ -33,6 +35,7 @@ public class ThreeSwitchDoorChild : MonoBehaviour
         if(other.tag == "Player")
         {
             parentScript.OnTriggerEnter(other);
+            switchSFX.Play();
             gameObject.GetComponent<Renderer>().material.color = Color.green;
             gameObject.GetComponent<BoxCollider>().enabled = false;
         }

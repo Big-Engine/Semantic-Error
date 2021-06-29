@@ -10,6 +10,7 @@ public class Audio_PlayerSFX : MonoBehaviour
     public AudioSource jump2;
     public AudioSource death1;
     public AudioSource gravity1;
+    public AudioSource wallSlide;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,15 @@ public class Audio_PlayerSFX : MonoBehaviour
         else
         {
             walkingStone.enabled = false;
+        }
+
+        if(playerScript.isWallSliding == true)
+        {
+            wallSlide.enabled = true;
+        }
+        else
+        {
+            wallSlide.enabled = false;
         }
     }
 }

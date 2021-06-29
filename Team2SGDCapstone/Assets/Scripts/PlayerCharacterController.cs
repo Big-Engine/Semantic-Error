@@ -25,7 +25,7 @@ public class PlayerCharacterController : MonoBehaviour
     //isActive determines if the player can move at all. Use it to freeze the player.
     public bool isActive = true;
     private bool isWallJumping = false;
-    private bool isWallSliding = false;
+    public bool isWallSliding = false;
     private float wallDirection;
     public float playerSpeed = 10.0f;
     public float jumpForce = 10.0f;
