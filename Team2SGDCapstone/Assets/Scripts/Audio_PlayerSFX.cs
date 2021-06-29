@@ -30,7 +30,7 @@ public class Audio_PlayerSFX : MonoBehaviour
             walkingStone.enabled = false;
         }
 
-        if(playerScript.isWallSliding == true)
+        if(playerScript.isWallSliding == true && !playerScript.isGrounded)
         {
             wallSlide.enabled = true;
         }
