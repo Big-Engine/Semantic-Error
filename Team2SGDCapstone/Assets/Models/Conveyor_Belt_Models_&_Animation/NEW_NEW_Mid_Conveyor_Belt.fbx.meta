@@ -6,7 +6,12 @@ ModelImporter:
   - first:
       74: 1827226128182048838
     second: Mid_Conveyor_Belt
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 634ed7e0821377b4398830de60af4a33, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
