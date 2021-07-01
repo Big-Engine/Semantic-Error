@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossSpiderSpawn : MonoBehaviour
+public class BossSpawn : MonoBehaviour
 {
-    public GameObject SpiderBoss;
+    public GameObject SpawnObject;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
-            SpiderBoss.SetActive(true);
+            SpawnObject.SetActive(true);
             GetComponent<BoxCollider>().enabled = false;
         }
     }
