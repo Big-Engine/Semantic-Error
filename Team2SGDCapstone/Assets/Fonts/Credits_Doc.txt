@@ -1,0 +1,38 @@
+CREDITS:
+
+Project Lead: 
+Caleb White
+
+Concept Art:
+Evan Blake, Kristen White, Mason Galvin
+
+Level Design:
+Charles Wagner, Caleb White, Evan Blake, Philip Bixby
+
+Asset Design:
+Evan Blake, Kristen White, Caleb White, Philip Bixby, Chris Passerini, Mason Galvin, Zachary Giraldo
+
+UI Design:
+Mason Galvin
+
+Textures:
+Kristen White, Caleb White, Evan Blake
+
+QA Testers:
+Caleb White, Charles Wagner, Zachary Giraldo
+
+Character Design/Rig:
+Kristen White, Philip Bixby
+
+Programmers:
+Zachary Giraldo, Chris Passerini
+
+Rigging/Animation:
+Philip Bixby, Charles Wagner
+
+Storyboarding/Concept:
+Chris Passerini
+
+Audio/FX:
+Philip Bixby, Mason Galvin, Zachary Giraldo
+
