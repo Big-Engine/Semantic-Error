@@ -25,7 +25,7 @@ Character Design/Rig:
 Kristen White, Philip Bixby
 
 Programmers:
-Zachary Giraldo, Chris Passerini
+Zachary Giraldo, Chris Passerini, Charles Wagner
 
 Rigging/Animation:
 Philip Bixby, Charles Wagner
