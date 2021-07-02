@@ -4,25 +4,25 @@ Project Lead:
 Caleb White
 
 Concept Art:
-Evan Blake, Kristen White, Mason Galvin
+Evan Blake, Kristen White, Mason Galvin, Charles Wagner
 
 Level Design:
 Charles Wagner, Caleb White, Evan Blake, Philip Bixby
 
 Asset Design:
-Evan Blake, Kristen White, Caleb White, Philip Bixby, Chris Passerini, Mason Galvin, Zachary Giraldo
+Evan Blake, Kristen White, Caleb White, Philip Bixby, Chris Passerini, Mason Galvin, Zachary Giraldo, Charles Wagner
 
 UI Design:
 Mason Galvin
 
 Textures:
-Kristen White, Caleb White, Evan Blake
+Kristen White, Caleb White, Evan Blake, Charles Wagner
 
 QA Testers:
 Caleb White, Charles Wagner, Zachary Giraldo
 
 Character Design/Rig:
-Kristen White, Philip Bixby
+Kristen White, Philip Bixby, Charles Wagner
 
 Programmers:
 Zachary Giraldo, Chris Passerini, Charles Wagner
@@ -31,7 +31,7 @@ Rigging/Animation:
 Philip Bixby, Charles Wagner
 
 Storyboarding/Concept:
-Chris Passerini
+Chris Passerini, Charles Wagner
 
 Audio/FX:
 Philip Bixby, Mason Galvin, Zachary Giraldo
