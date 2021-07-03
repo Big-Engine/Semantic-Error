@@ -28,6 +28,7 @@ public class PlayerCharacterController : MonoBehaviour
     public bool isWallSliding = false;
     private float wallDirection;
     public float playerSpeed = 10.0f;
+    public float turnSpeed = 0.0f;
     public float jumpForce = 10.0f;
     public bool doubleJumpEnabled = false;
     [SerializeField] private bool canDoubleJump = false;
@@ -91,7 +92,9 @@ public class PlayerCharacterController : MonoBehaviour
             inputDirection = 0;
         }
 
-        moveVector = new Vector3(inputDirection, 0f, 0f);
+        //moveVector = new Vector3(inputDirection, 0f, 0f);
+
+        moveVector = transform.right * -inputDirection;
 
         //Combines the player's movement with that of a conveyor belt (If they're standing on one).
         moveVector += conveyorVector;
@@ -99,8 +102,18 @@ public class PlayerCharacterController : MonoBehaviour
         //Applies horizontal forces to the player.
         characterController.Move(moveVector * playerSpeed * Time.deltaTime);
 
+        //Rotates the player relative to their movement
+        if (inputDirection > 0)
+        {
+            transform.Rotate(Vector3.up * -turnSpeed * Time.deltaTime);
+        }
+        else if (inputDirection < 0)
+        {
+            transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime);
+        }
+
         //This causes the player to jump when standing on the ground.
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded && isActive)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded && isActive)
         {
             velocity.y = Mathf.Sqrt(jumpForce * -2.0f * gravity);
             CheckForDoubleJumpPermisson();
