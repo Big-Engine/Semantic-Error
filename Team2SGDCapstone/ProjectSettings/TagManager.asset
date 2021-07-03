@@ -15,6 +15,7 @@ TagManager:
   - Hazard_Fall
   - Reverse
   - BlackScreen
+  - BOSS
   layers:
   - Default
   - TransparentFX

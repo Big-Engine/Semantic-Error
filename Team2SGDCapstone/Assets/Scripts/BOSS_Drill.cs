@@ -10,7 +10,7 @@ public class BOSS_Drill : MonoBehaviour
     public Vector3 thirdCheckpoint;
     public Vector3 endPosition;
 
-    private Vector3 currentCheckpoint;
+    public Vector3 currentCheckpoint;
     private Vector3 nextCheckpoint;
     [SerializeField] float speed;
 
@@ -60,17 +60,14 @@ public class BOSS_Drill : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, firstCheckpoint) < 1f && nextCheckpoint == firstCheckpoint)
         {
-            currentCheckpoint = firstCheckpoint;
             nextCheckpoint = secondCheckpoint;
         }
         else if (Vector3.Distance(transform.position, secondCheckpoint) < 1f && nextCheckpoint == secondCheckpoint)
         {
-            currentCheckpoint = secondCheckpoint;
             nextCheckpoint = thirdCheckpoint;
         }
         else if (Vector3.Distance(transform.position, thirdCheckpoint) < 1f && nextCheckpoint == thirdCheckpoint)
         {
-            currentCheckpoint = thirdCheckpoint;
             nextCheckpoint = endPosition;
         }
 

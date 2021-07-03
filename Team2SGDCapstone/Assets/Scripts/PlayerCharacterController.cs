@@ -294,14 +294,14 @@ public class PlayerCharacterController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     //Handles events for triggers. Use this for non-solid collisions (I.E. objects the player passes through).
     {
-        if (other.gameObject.tag == "Hazard_Fall")
+        if (other.gameObject.tag == "Hazard_Fall" || other.gameObject.tag == "BOSS")
         {
             Debug.Log("Player fell to their death.");
             isActive = false;
             characterController.enabled = false;
             blackScreenScript.DeathScreen();//fade to black and back
             StartCoroutine(RespawnPlayer());
-            gameObject.GetComponent<EventManager>().ResetObjects();
+            gameObject.GetComponent<EventManager>().ResetObjects();           
 
             //play sfx
             playerSFX.death1.Play();
@@ -348,6 +348,7 @@ public class PlayerCharacterController : MonoBehaviour
         conveyorVector = new Vector3(0, 0, 0);
         yield return new WaitForSeconds(1f);
         gameObject.transform.position = currentRespawnLocation;
+        transform.rotation = Quaternion.Euler(0, 180, 0); //reset player back to default rotation
         characterController.enabled = true;
         isActive = true;
     }
