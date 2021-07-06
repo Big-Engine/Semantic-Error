@@ -19,6 +19,10 @@ public class BOSS_Spider : MonoBehaviour
     private bool isIdle;
     private Animator spiderAnim;
 
+    public AudioSource spiderWalkSFX;
+    public AudioSource spiderScreamSFX;
+    public AudioSource spiderScreamSFX2;
+
     void OnEnable()
     {
         EventManager.OnReset += ResetPosition;
@@ -36,6 +40,8 @@ public class BOSS_Spider : MonoBehaviour
         spiderAnim = GetComponentInChildren<Animator>();
         spiderAnim.SetBool("isScreaming", true); //play scream animation  
         Invoke("StartCycle", 7.0f);
+        spiderScreamSFX.PlayDelayed(2f);
+        spiderWalkSFX.enabled = false;
     }
 
     void Update()
@@ -49,6 +55,7 @@ public class BOSS_Spider : MonoBehaviour
             if(isMoving)
             {
                 transform.position = Vector3.MoveTowards(transform.position, nextCheckpoint, speed * Time.deltaTime);
+                spiderWalkSFX.enabled = true;
                 WhichCheckpoint();
             }
             if (Vector3.Distance(transform.position, endPosition) < 1f && !isIdle)
@@ -95,11 +102,14 @@ public class BOSS_Spider : MonoBehaviour
         spiderAnim.SetBool("isWalking", false);
         spiderAnim.SetBool("isDying", true);              
         GetComponent<BoxCollider>().isTrigger = false;
+        spiderWalkSFX.enabled = false;
+        spiderScreamSFX2.Play();
     }
 
     void IdleAnimation()
     {
         //when spider reaches end
+        spiderWalkSFX.enabled = false;
         spiderAnim.SetBool("isWalking", false);
         spiderAnim.SetBool("isIdle", true);
     }
