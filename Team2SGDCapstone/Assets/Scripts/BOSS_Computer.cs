@@ -103,6 +103,6 @@ public class BOSS_Computer : MonoBehaviour
 
     public void EndScene()//end of fight, fade to white, then send to end cutscene/credits
     {
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("EndCutsceneCredits");
     }
 }
