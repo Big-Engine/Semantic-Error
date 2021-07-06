@@ -33,7 +33,7 @@ public class PlayerCharacterController : MonoBehaviour
     public bool doubleJumpEnabled = false;
     [SerializeField] private bool canDoubleJump = false;
     private bool hasSprung = false;
-    private bool isReversed = false;
+    public bool isReversed = false;
 
     //These are used to check if the player is standing on anything in the "Ground" Layer.
     public Transform groundCheck;

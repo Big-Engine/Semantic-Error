@@ -12,6 +12,7 @@ public class UI_TitleScreen : MonoBehaviour
 
     [SerializeField] private string IntroScene;
     [SerializeField] private string LevelSelectScene;
+    [SerializeField] private string creditsScene;
 
     //Play button
     public void OnPressPlay()
@@ -58,5 +59,11 @@ public class UI_TitleScreen : MonoBehaviour
     public void OnPressQuitNo()
     {
         quitPanel.SetActive(false);
+    }
+
+    //credits
+    public void OnClickCredits()
+    {
+        SceneManager.LoadScene(creditsScene);
     }
 }

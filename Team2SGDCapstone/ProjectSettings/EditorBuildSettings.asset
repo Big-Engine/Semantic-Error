@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main_00_TitleScreen.unity
     guid: 4c65598b9c733d348abe91d9bcc56d71
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Main_01_IntroCutscene.unity
     guid: 6f4c3d685cd7e454f8437492ce380490
   - enabled: 1
@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Level_03.unity
     guid: a8ad1711057496a409728c7d403d679b
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: f085275a5a7950d4b8c119540c85b875
   - enabled: 0
     path: Assets/Scenes/Dev_AssetGallery.unity
     guid: fdbbde61adc57844f9f232caf15ce270
