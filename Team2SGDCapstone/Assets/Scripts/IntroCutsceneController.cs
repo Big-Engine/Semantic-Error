@@ -11,6 +11,17 @@ public class IntroCutsceneController : MonoBehaviour
     public GameObject cam4;
     public GameObject cam5;
     public GameObject cam6;
+    public GameObject cam7;
+    public GameObject cam8;
+    public GameObject cam9;
+    public GameObject cam10;
+    public GameObject cam11;
+    public GameObject cam12;
+    public GameObject cam13;
+    public GameObject cam14;
+    public GameObject cam15;
+    public GameObject cam16;
+    public GameObject cam17;
     [SerializeField] float waitTime = 3.0f;
 
     private GameObject blackScreen;
@@ -70,13 +81,106 @@ public class IntroCutsceneController : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         cam5.SetActive(false);
         cam6.SetActive(true);
-        StartCoroutine(switchScenes());
+        StartCoroutine(switchCam7());
     }
 
-    IEnumerator switchScenes()
+    IEnumerator switchCam7()
     {
+        yield return new WaitForSeconds(waitTime);
+        cam6.SetActive(false);
+        cam7.SetActive(true);
+        StartCoroutine(switchCam8());
+    }
+
+    IEnumerator switchCam8()
+    {
+        yield return new WaitForSeconds(waitTime);
+        cam7.SetActive(false);
+        cam8.SetActive(true);
+        StartCoroutine(switchCam9());
+    }
+
+    IEnumerator switchCam9()
+    {
+        yield return new WaitForSeconds(waitTime);
+        cam8.SetActive(false);
+        cam9.SetActive(true);
+        StartCoroutine(switchCam10());
+    }
+
+    IEnumerator switchCam10()
+    {
+        yield return new WaitForSeconds(waitTime);
+        cam9.SetActive(false);
+        cam10.SetActive(true);
+        StartCoroutine(switchCam11());
+    }
+
+    IEnumerator switchCam11()
+    {
+        yield return new WaitForSeconds(waitTime);
+        cam10.SetActive(false);
+        cam11.SetActive(true);
+        StartCoroutine(switchCam12());
+    }
+
+    IEnumerator switchCam12()
+    {
+        yield return new WaitForSeconds(waitTime);
+        cam11.SetActive(false);
+        cam12.SetActive(true);
+        StartCoroutine(switchCam13());
+    }
+
+    IEnumerator switchCam13()
+    {
+        yield return new WaitForSeconds(waitTime);
+        cam12.SetActive(false);
+        cam13.SetActive(true);
+        StartCoroutine(switchCam14());
+    }
+
+    IEnumerator switchCam14()
+    {
+        yield return new WaitForSeconds(waitTime);
+        cam13.SetActive(false);
+        cam14.SetActive(true);
+        StartCoroutine(switchCam15());
+    }
+
+    IEnumerator switchCam15()
+    {
+        yield return new WaitForSeconds(waitTime);
+        cam14.SetActive(false);
+        cam15.SetActive(true);
+        StartCoroutine(switchCam16());
+    }
+
+    IEnumerator switchCam16()
+    {
+        yield return new WaitForSeconds(waitTime);
+        cam15.SetActive(false);
+        cam16.SetActive(true);
+        StartCoroutine(switchCam17());
+    }
+
+    IEnumerator switchCam17()
+    {
+        yield return new WaitForSeconds(waitTime);
+        cam16.SetActive(false);
+        cam17.SetActive(true);
+        StartCoroutine(transition());
+    }
+
+    IEnumerator transition()
+    {
+        yield return new WaitForSeconds(waitTime);
         blackScreenScript.DeathScreen();
-        yield return new WaitForSeconds(0.5f);
+        Invoke("switchScene", 1f);
+    }
+
+    void switchScene()
+    {
         SceneManager.LoadScene("Level_01");
     }
 }

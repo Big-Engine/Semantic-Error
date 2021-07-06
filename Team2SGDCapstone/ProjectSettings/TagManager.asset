@@ -16,6 +16,7 @@ TagManager:
   - Reverse
   - BlackScreen
   - BOSS
+  - WhiteScreen
   layers:
   - Default
   - TransparentFX
