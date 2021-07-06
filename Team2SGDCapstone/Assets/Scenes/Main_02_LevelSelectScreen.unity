@@ -960,7 +960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelOne: Level_01
   LevelTwo: Level_02
-  LevelThree: Level_03
+  LevelThree: FINAL_BOSS
   TitleScene: Main_00_TitleScreen
 --- !u!4 &441177794
 Transform:
@@ -1246,7 +1246,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 622721550}
   m_OnClick:
     m_PersistentCalls:
