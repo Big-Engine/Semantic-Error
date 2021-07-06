@@ -18,7 +18,7 @@ public class BOSS_Computer_Laser : MonoBehaviour
     {
         laserAnim.SetTrigger("Laser");
         //laserSFX.PlayDelayed(0.5f);
-        Invoke("TriggerLaser", 18.5f);
+        Invoke("TriggerLaser", 18.3f);
         Debug.Log("LASER");
     }
 }
