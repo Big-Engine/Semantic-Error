@@ -42,6 +42,8 @@ public class BOSS_Computer_Switch : MonoBehaviour
                 bossScript.switch1.SetActive(false);
                 bossScript.switch2.SetActive(false);
                 bossScript.switch3.SetActive(true);
+                bossScript.whooshShort.Play();
+                bossScript.DisableAll();
             }
 
             if (bossScript.switchesActive == 3)
@@ -52,6 +54,8 @@ public class BOSS_Computer_Switch : MonoBehaviour
                 bossScript.switch3.SetActive(false);
                 bossScript.switch4.SetActive(true);
                 bossScript.switch5.SetActive(true);
+                bossScript.whooshShort2.Play();
+                bossScript.EnableAll();
             }
 
             if (bossScript.switchesActive == 5)
@@ -62,6 +66,8 @@ public class BOSS_Computer_Switch : MonoBehaviour
                 bossScript.switch4.SetActive(false);
                 bossScript.switch5.SetActive(false);
                 bossScript.switch6.SetActive(true);
+                bossScript.whooshShort.Play();
+                bossScript.DisableAll();
             }
 
             if (bossScript.switchesActive == 6)
@@ -72,6 +78,8 @@ public class BOSS_Computer_Switch : MonoBehaviour
                 bossScript.switch6.SetActive(false);
                 bossScript.switch7.SetActive(true);
                 bossScript.switch8.SetActive(true);
+                bossScript.whooshShort2.Play();
+                bossScript.EnableAll();
             }
 
             if (bossScript.switchesActive == 8)
@@ -87,6 +95,7 @@ public class BOSS_Computer_Switch : MonoBehaviour
                 bossScript.Invoke("EndScene", 5.0f);
                 Time.timeScale = 0.5f;
                 whiteScreenScript.LongFade();
+                bossScript.whooshLong.Play();
             }
         }
     }

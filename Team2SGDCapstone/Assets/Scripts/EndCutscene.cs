@@ -30,14 +30,6 @@ public class EndCutscene : MonoBehaviour
         StartCoroutine(switchCam2());
     }
 
-    //void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.Escape))
-    //    {
-    //        SceneManager.LoadScene("Level_01");
-    //    }
-    //}
-
     IEnumerator switchCam2()
     {
         yield return new WaitForSeconds(waitTime);

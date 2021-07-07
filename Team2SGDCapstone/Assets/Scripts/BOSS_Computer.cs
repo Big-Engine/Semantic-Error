@@ -37,11 +37,26 @@ public class BOSS_Computer : MonoBehaviour
     public GameObject camConfine1;
     public GameObject camConfine2;
 
+    //audio
+    public AudioSource robotNoise1;
+    public AudioSource robotNoise2;
+    public AudioSource knife1;
+    public AudioSource knife2;
+    public AudioSource whooshShort;
+    public AudioSource whooshShort2;
+    public AudioSource whooshLong;
+
+    public GameObject computerLaser;
+
     void Start()
     {
         playerScript = playerObj.GetComponent<PlayerCharacterController>();
         switch1.SetActive(true);
         switch2.SetActive(true);
+        Invoke("PlayKnife1", 3.1f);
+        Invoke("PlayKnife2", 5.65f);
+        Invoke("PlayRoboSound1", Random.Range(5.0f, 10.0f));
+        Invoke("PlayRoboSound2", Random.Range(5.0f, 10.0f));
     }
 
     void Update()
@@ -104,5 +119,53 @@ public class BOSS_Computer : MonoBehaviour
     public void EndScene()//end of fight, fade to white, then send to end cutscene/credits
     {
         SceneManager.LoadScene("EndCutsceneCredits");
+    }
+
+    void PlayKnife1()
+    {
+        knife1.Play();
+        Invoke("PlayKnife1", 18.3f);
+    }
+
+    void PlayKnife2()
+    {
+        knife2.Play();
+        Invoke("PlayKnife2", 18.3f);
+    }
+
+    void PlayRoboSound1()
+    {
+        robotNoise1.Play();
+        Invoke("PlayRoboSound1", Random.Range(5.0f, 10.0f));
+    }
+
+    void PlayRoboSound2()
+    {
+        robotNoise2.Play();
+        Invoke("PlayRoboSound2", Random.Range(5.0f, 10.0f));
+    }
+
+    public void DisableAll()//disable all sfx
+    {
+        robotNoise1.enabled = false;
+        robotNoise2.enabled = false;
+        knife1.enabled = false;
+        knife2.enabled = false;
+        whooshShort.enabled = false;
+        whooshShort2.enabled = false;
+        whooshLong.enabled = false;
+        computerLaser.SetActive(false);
+    }
+
+    public void EnableAll()//enable all sfx
+    {
+        robotNoise1.enabled = true;
+        robotNoise2.enabled = true;
+        knife1.enabled = true;
+        knife2.enabled = true;
+        whooshShort.enabled = true;
+        whooshShort2.enabled = true;
+        whooshLong.enabled = true;
+        computerLaser.SetActive(true);
     }
 }
