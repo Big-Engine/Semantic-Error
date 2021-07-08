@@ -11,6 +11,11 @@ public class UI_PauseMenu : MonoBehaviour
     [SerializeField] private string currentScene;
     [SerializeField] private string titleScene;
 
+    private void Start()
+    {
+        Time.timeScale = 1;//ensures that the game is not in slowmo/frozen at start of the level
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
