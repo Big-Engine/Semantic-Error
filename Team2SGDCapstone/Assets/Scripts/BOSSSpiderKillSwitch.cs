@@ -6,6 +6,7 @@ public class BOSSSpiderKillSwitch : MonoBehaviour
 {
     public Transform SpiderBoss;
     private BOSS_Spider spiderBossScript;
+    public GameObject NoNoBlock;
 
     void OnEnable()
     {
@@ -32,6 +33,7 @@ public class BOSSSpiderKillSwitch : MonoBehaviour
             spiderBossScript.DeathAnimation();
             gameObject.GetComponent<Renderer>().material.color = Color.green;
             gameObject.GetComponent<BoxCollider>().enabled = false;
+            NoNoBlock.SetActive(true);
         }
     }
 
