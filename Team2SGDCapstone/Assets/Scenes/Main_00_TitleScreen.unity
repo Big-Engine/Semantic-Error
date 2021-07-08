@@ -1112,6 +1112,7 @@ RectTransform:
   - {fileID: 92971084}
   - {fileID: 250978866}
   - {fileID: 360330854}
+  - {fileID: 1524757321}
   m_Father: {fileID: 1894975139}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1259,7 +1260,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.9716981, g: 0.3221546, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -2902,13 +2903,13 @@ RectTransform:
   m_LocalScale: {x: 3.2542698, y: 5.4986906, z: 4.97177}
   m_Children:
   - {fileID: 438384189}
-  m_Father: {fileID: 1894975139}
+  m_Father: {fileID: 294723123}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -256, y: -375}
-  m_SizeDelta: {x: -1766.4631, y: -1054.2415}
+  m_AnchoredPosition: {x: -252.12152, y: -375.00003}
+  m_SizeDelta: {x: -78.6261, y: -185.92151}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1524757322
 MonoBehaviour:
@@ -2932,8 +2933,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.61047786, b: 0.1830188, a: 1}
+    m_PressedColor: {r: 0.9466945, g: 1, b: 0.2113207, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -3965,7 +3966,6 @@ RectTransform:
   - {fileID: 1669116895}
   - {fileID: 294723123}
   - {fileID: 461731803}
-  - {fileID: 1524757321}
   m_Father: {fileID: 1239996685}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
