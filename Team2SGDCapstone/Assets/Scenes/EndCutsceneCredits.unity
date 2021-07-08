@@ -483,110 +483,6 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 142996524}
---- !u!1 &202411215
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 202411216}
-  - component: {fileID: 202411219}
-  - component: {fileID: 202411218}
-  - component: {fileID: 202411217}
-  m_Layer: 5
-  m_Name: Credits_Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &202411216
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 202411215}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 714224527}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -3016}
-  m_SizeDelta: {x: 1177.2823, y: 4903.9297}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &202411217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 202411215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0d7163ac220053498a836524fde56ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 100
-  maxPosition: 2353
---- !u!114 &202411218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 202411215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 25f6ec72d8cba5d4b8660d110b9da48a, type: 3}
-    m_FontSize: 63
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 72
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1.21
-  m_Text: "CREDITS:\r\n\r\nProject Lead: \r\nCaleb White\r\n\r\nConcept Art:\r\nEvan
-    Blake\nKristen White\nMason Galvin\nCharles Wagner\r\n\r\nLevel Design:\r\nCharles
-    Wagner\nCaleb White\nEvan Blake\nPhilip Bixby\r\n\r\nAsset Design:\r\nEvan Blake\nKristen
-    White\nCaleb White\nPhilip Bixby\nChris Passerini\nMason Galvin\nZachary Giraldo\nCharles
-    Wagner\r\n\r\nUI Design:\r\nMason Galvin\r\n\r\nTextures:\r\nKristen White\nCaleb
-    White\nEvan Blake\nCharles Wagner\r\n\r\nQA Testers:\r\nCaleb White\nCharles
-    Wagner\nZachary Giraldo\r\n\r\nCharacter Design/Rig:\r\nKristen White\nPhilip
-    Bixby\nCharles Wagner\r\n\r\nProgrammers:\r\nZachary Giraldo\nChris Passerini\nCharles
-    Wagner\r\n\r\nRigging/Animation:\r\nPhilip Bixby\nCharles Wagner\r\n\r\nStoryboarding/Concept:\r\nChris
-    Passerini\nCharles Wagner\r\n\r\nAudio/FX:\r\nPhilip Bixby\nMason Galvin\nZachary
-    Giraldo\r\n\n\n\n\n\n\n\n\n\n\n\nThanks for Playing!"
---- !u!222 &202411219
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 202411215}
-  m_CullTransparentMesh: 1
 --- !u!1 &226549325
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,7 +1038,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1272553595}
-  - {fileID: 202411216}
+  - {fileID: 919755065}
   - {fileID: 1940436280}
   - {fileID: 1511060500}
   m_Father: {fileID: 2000878635}
@@ -1401,6 +1297,112 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &919755064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 919755065}
+  - component: {fileID: 919755068}
+  - component: {fileID: 919755067}
+  - component: {fileID: 919755066}
+  m_Layer: 5
+  m_Name: Credits_Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &919755065
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919755064}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 714224527}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -3375}
+  m_SizeDelta: {x: 1177.2823, y: 5845.506}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &919755066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919755064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d7163ac220053498a836524fde56ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 100
+  maxPosition: 2781
+--- !u!114 &919755067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919755064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 25f6ec72d8cba5d4b8660d110b9da48a, type: 3}
+    m_FontSize: 63
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 72
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1.21
+  m_Text: "Semantic Error\r\n\r\nProject Lead: \r\nCaleb White\r\n\r\nConcept Art:\r\nEvan
+    Blake\nKristen White\nMason Galvin\nCharles Wagner\r\n\r\nLevel Design:\r\nCharles
+    Wagner\nCaleb White\nEvan Blake\nPhilip Bixby\r\n\r\nAsset Design:\r\nEvan Blake\nKristen
+    White\nCaleb White\nPhilip Bixby\nChris Passerini\nMason Galvin\nZachary Giraldo\nCharles
+    Wagner\r\n\r\nUI Design:\r\nMason Galvin\r\n\r\nTextures:\r\nKristen White\nCaleb
+    White\nEvan Blake\nCharles Wagner\r\n\r\nQA Testers:\r\nCaleb White\nCharles
+    Wagner\nZachary Giraldo\r\n\r\nCharacter Design/Rig:\r\nKristen White\nPhilip
+    Bixby\nCharles Wagner\r\n\r\nProgrammers:\r\nZachary Giraldo\nChris Passerini\nCharles
+    Wagner\r\n\r\nRigging/Animation:\r\nPhilip Bixby\nCharles Wagner\r\n\r\nStoryboarding/Concept:\r\nChris
+    Passerini\nCharles Wagner\r\n\r\nAudio/FX:\r\nPhilip Bixby\nMason Galvin\nZachary
+    Giraldo\r\n\nOutside Sources:\nMonster Scream - thegoose09\nCave ambience - Julius
+    Galla\nVarious SFX - Adobe\n\n\n\n\n\nIn Loving memory of Patricia Hegarty\n\n\n\n\n\n\n\n\n\n\nThanks
+    for Playing!"
+--- !u!222 &919755068
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919755064}
+  m_CullTransparentMesh: 1
 --- !u!1 &941683178
 GameObject:
   m_ObjectHideFlags: 3

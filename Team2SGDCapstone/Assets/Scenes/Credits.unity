@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -3016}
-  m_SizeDelta: {x: 1177.2823, y: 4903.9297}
+  m_AnchoredPosition: {x: 0, y: -3375}
+  m_SizeDelta: {x: 1177.2823, y: 5845.506}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &202411217
 MonoBehaviour:
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
-  maxPosition: 2353
+  maxPosition: 2781
 --- !u!114 &202411218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,7 +208,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.21
-  m_Text: "CREDITS:\r\n\r\nProject Lead: \r\nCaleb White\r\n\r\nConcept Art:\r\nEvan
+  m_Text: "Semantic Error\r\n\r\nProject Lead: \r\nCaleb White\r\n\r\nConcept Art:\r\nEvan
     Blake\nKristen White\nMason Galvin\nCharles Wagner\r\n\r\nLevel Design:\r\nCharles
     Wagner\nCaleb White\nEvan Blake\nPhilip Bixby\r\n\r\nAsset Design:\r\nEvan Blake\nKristen
     White\nCaleb White\nPhilip Bixby\nChris Passerini\nMason Galvin\nZachary Giraldo\nCharles
@@ -218,7 +218,9 @@ MonoBehaviour:
     Bixby\nCharles Wagner\r\n\r\nProgrammers:\r\nZachary Giraldo\nChris Passerini\nCharles
     Wagner\r\n\r\nRigging/Animation:\r\nPhilip Bixby\nCharles Wagner\r\n\r\nStoryboarding/Concept:\r\nChris
     Passerini\nCharles Wagner\r\n\r\nAudio/FX:\r\nPhilip Bixby\nMason Galvin\nZachary
-    Giraldo\r\n\n\n\n\n\n\n\n\n\n\n\nThanks for Playing!"
+    Giraldo\r\n\nOutside Sources:\nMonster Scream - thegoose09\nCave ambience - Julius
+    Galla\nVarious SFX - Adobe\n\n\n\n\n\nIn Loving memory of Patricia Hegarty\n\n\n\n\n\n\n\n\n\n\nThanks
+    for Playing!"
 --- !u!222 &202411219
 CanvasRenderer:
   m_ObjectHideFlags: 0
