@@ -137,40 +137,40 @@ public class IntroCutsceneController : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         cam12.SetActive(false);
         cam13.SetActive(true);
-        StartCoroutine(switchCam14());
-    }
-
-    IEnumerator switchCam14()
-    {
-        yield return new WaitForSeconds(waitTime);
-        cam13.SetActive(false);
-        cam14.SetActive(true);
-        StartCoroutine(switchCam15());
-    }
-
-    IEnumerator switchCam15()
-    {
-        yield return new WaitForSeconds(waitTime);
-        cam14.SetActive(false);
-        cam15.SetActive(true);
-        StartCoroutine(switchCam16());
-    }
-
-    IEnumerator switchCam16()
-    {
-        yield return new WaitForSeconds(waitTime);
-        cam15.SetActive(false);
-        cam16.SetActive(true);
-        StartCoroutine(switchCam17());
-    }
-
-    IEnumerator switchCam17()
-    {
-        yield return new WaitForSeconds(waitTime);
-        cam16.SetActive(false);
-        cam17.SetActive(true);
         StartCoroutine(transition());
     }
+
+    //IEnumerator switchCam14()
+    //{
+    //    yield return new WaitForSeconds(waitTime);
+    //    cam13.SetActive(false);
+    //    cam14.SetActive(true);
+    //    StartCoroutine(switchCam15());
+    //}
+
+    //IEnumerator switchCam15()
+    //{
+    //    yield return new WaitForSeconds(waitTime);
+    //    cam14.SetActive(false);
+    //    cam15.SetActive(true);
+    //    StartCoroutine(switchCam16());
+    //}
+
+    //IEnumerator switchCam16()
+    //{
+    //    yield return new WaitForSeconds(waitTime);
+    //    cam15.SetActive(false);
+    //    cam16.SetActive(true);
+    //    StartCoroutine(switchCam17());
+    //}
+
+    //IEnumerator switchCam17()
+    //{
+    //    yield return new WaitForSeconds(waitTime);
+    //    cam16.SetActive(false);
+    //    cam17.SetActive(true);
+    //    StartCoroutine(transition());
+    //}
 
     IEnumerator transition()
     {
