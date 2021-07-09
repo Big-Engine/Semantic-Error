@@ -108,7 +108,7 @@ public class BOSS_Computer : MonoBehaviour
     public void FinalPhase()//disables main ring, causing player to fall down. Activates the final platforming puzzle back upwards after 3 seconds
     {
         mainRing.SetActive(false);
-        Invoke("activatePuzzle", 2.0f);
+        Invoke("activatePuzzle", 3.0f);
     }
 
     void activatePuzzle()
