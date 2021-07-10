@@ -15,6 +15,8 @@ public class UI_LevelSelect : MonoBehaviour
     //Level 1
     public void OnPressLevel1()
     {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
         StartCoroutine(LoadLevel1());
     }
     IEnumerator LoadLevel1()

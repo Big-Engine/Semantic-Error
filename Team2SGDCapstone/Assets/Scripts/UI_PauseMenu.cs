@@ -14,6 +14,8 @@ public class UI_PauseMenu : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;//ensures that the game is not in slowmo/frozen at start of the level
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
@@ -43,11 +45,15 @@ public class UI_PauseMenu : MonoBehaviour
         {
             Time.timeScale = 0;//pause
             pausePanel.SetActive(true);
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
         }
         else
         {
             Time.timeScale = 1;//unpause
             pausePanel.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 

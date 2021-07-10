@@ -17,6 +17,8 @@ public class UI_TitleScreen : MonoBehaviour
     //Play button
     public void OnPressPlay()
     {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
         StartCoroutine(LoadIntro());
     }
     IEnumerator LoadIntro()
