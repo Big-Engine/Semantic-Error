@@ -29,6 +29,7 @@ public class PlayerCharacterController : MonoBehaviour
     private float wallDirection;
     public float playerSpeed = 10.0f;
     public float turnSpeed = 0.0f;
+    private float storedTurnSpeed;
     public float jumpForce = 10.0f;
     public bool doubleJumpEnabled = false;
     [SerializeField] private bool canDoubleJump = false;
@@ -56,6 +57,7 @@ public class PlayerCharacterController : MonoBehaviour
         playerSFX = GetComponent<Audio_PlayerSFX>();
         blackScreen = GameObject.FindGameObjectWithTag("BlackScreen");
         blackScreenScript = blackScreen.GetComponent<FadeToBlack>();
+        storedTurnSpeed = turnSpeed;
 
         //Sets the player's respawn point to their starting location.
         //Used for level design and debugging.
@@ -142,7 +144,7 @@ public class PlayerCharacterController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isWallSliding && !isGrounded)
         //If the player presses jump while wall sliding...
         {
-            Debug.Log("Tried to wall jump");
+            //Debug.Log("Tried to wall jump");
             //They perform a wall jump and reenable their double jump.
             velocity.y = Mathf.Sqrt((jumpForce / 1.5f) * -2.0f * gravity);
 
@@ -247,7 +249,7 @@ public class PlayerCharacterController : MonoBehaviour
     //This handles events for colliding with other objects.
     //Use this for solid collisions (I.E. objects that the player cannot pass through).
     {
-        if (!isGrounded && hit.normal.y < 0.001f && hit.normal.y > -0.001f)
+        if (!isGrounded && hit.normal.y < 0.001f && hit.normal.y > -0.001f && hit.collider.gameObject.layer != LayerMask.NameToLayer("RotationFix"))
         //If the player is touching a wall and they're not on the ground...
         {
             //Debug.DrawRay(hit.point, hit.normal, Color.red, 2.0f);
@@ -325,6 +327,16 @@ public class PlayerCharacterController : MonoBehaviour
         {
             velocity.y = 15.0f;
         }
+
+        //if(other.gameObject.tag == "RotationFix")
+        ////Attempts to fix the final boss arena by disabling and reenabling turnSpeed.
+        //{
+        //    turnSpeed = 0.0f;
+        //}
+        //else
+        //{
+        //    turnSpeed = storedTurnSpeed;
+        //}
     }
 
     private void ReversePlayerGravity()
