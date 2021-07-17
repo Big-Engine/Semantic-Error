@@ -14,11 +14,15 @@ public class UI_TitleScreen : MonoBehaviour
     [SerializeField] private string LevelSelectScene;
     [SerializeField] private string creditsScene;
 
-    //Play button
-    public void OnPressPlay()
+    void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
+    }
+
+    //Play button
+    public void OnPressPlay()
+    {
         StartCoroutine(LoadIntro());
     }
     IEnumerator LoadIntro()
