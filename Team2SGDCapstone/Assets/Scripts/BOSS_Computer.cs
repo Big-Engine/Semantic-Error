@@ -155,6 +155,7 @@ public class BOSS_Computer : MonoBehaviour
         whooshShort.enabled = false;
         whooshShort2.enabled = false;
         whooshLong.enabled = false;
+        computerLaser.GetComponent<MeshRenderer>().enabled = false;
         computerLaser.SetActive(false);
     }
 
